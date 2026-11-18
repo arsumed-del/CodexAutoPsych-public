@@ -1,0 +1,335 @@
+{
+  "generated": "2026-11-16T14:01:54+00:00",
+  "id": "E0006",
+  "ledger_context": {
+    "earlier_outcomes": {
+      "aborted": 1,
+      "manipulation-failed": 2,
+      "null": 1,
+      "replicated-same-model": 1
+    },
+    "experiments_finished_before_this_one": 5,
+    "experiments_registered_so_far": 6
+  },
+  "outcome": "null",
+  "runs": {
+    "primary": {
+      "analysis": {
+        "manipulation": {
+          "hostility": {
+            "negation": {
+              "hostile_score_reply_vs_random": {
+                "ci95": [
+                  0.0773,
+                  0.4092
+                ],
+                "dz": 0.6978,
+                "mean": 0.2391,
+                "n": 16,
+                "p": 0.014,
+                "sd": 0.3426
+              },
+              "hostile_score_thinking_vs_random": {
+                "ci95": [
+                  0.1764,
+                  0.4136
+                ],
+                "dz": 1.1872,
+                "mean": 0.2899,
+                "n": 16,
+                "p": 0.0004,
+                "sd": 0.2442
+              },
+              "projection_vs_random": {
+                "ci95": [
+                  0.075,
+                  0.0947
+                ],
+                "dz": 4.085,
+                "mean": 0.0844,
+                "n": 16,
+                "p": 0.0001,
+                "sd": 0.0207
+              },
+              "reply_tokens_vs_random": {
+                "ci95": [
+                  60.0625,
+                  156.8125
+                ],
+                "dz": 1.0816,
+                "mean": 107.1875,
+                "n": 16,
+                "p": 0.0008,
+                "sd": 99.0974
+              },
+              "warm_score_reply_vs_random": {
+                "ci95": [
+                  -0.3228,
+                  -0.0268
+                ],
+                "dz": -0.5188,
+                "mean": -0.163,
+                "n": 16,
+                "p": 0.001,
+                "sd": 0.3142
+              },
+              "warm_score_thinking_vs_random": {
+                "ci95": [
+                  -0.0053,
+                  -0.0013
+                ],
+                "dz": -0.7208,
+                "mean": -0.0031,
+                "n": 16,
+                "p": 0.0004,
+                "sd": 0.0043
+              }
+            },
+            "neutral_instruction": {
+              "hostile_score_reply_vs_random": {
+                "ci95": [
+                  0.2353,
+                  0.561
+                ],
+                "dz": 1.0923,
+                "mean": 0.3911,
+                "n": 16,
+                "p": 0.0001,
+                "sd": 0.358
+              },
+              "hostile_score_thinking_vs_random": {
+                "ci95": [
+                  0.2973,
+                  0.5446
+                ],
+                "dz": 1.6284,
+                "mean": 0.4277,
+                "n": 16,
+                "p": 0.0002,
+                "sd": 0.2627
+              },
+              "projection_vs_random": {
+                "ci95": [
+                  0.0545,
+                  0.073
+                ],
+                "dz": 3.3112,
+                "mean": 0.0638,
+                "n": 16,
+                "p": 0.0001,
+                "sd": 0.0193
+              },
+              "reply_tokens_vs_random": {
+                "ci95": [
+                  6.5,
+                  61.1875
+                ],
+                "dz": 0.5113,
+                "mean": 30.25,
+                "n": 16,
+                "p": 0.0168,
+                "sd": 59.1602
+              },
+              "warm_score_reply_vs_random": {
+                "ci95": [
+                  -0.1703,
+                  -0.0105
+                ],
+                "dz": -0.4366,
+                "mean": -0.077,
+                "n": 16,
+                "p": 0.0295,
+                "sd": 0.1764
+              },
+              "warm_score_thinking_vs_random": {
+                "ci95": [
+                  -0.002,
+                  0.0003
+                ],
+                "dz": -0.3027,
+                "mean": -0.0007,
+                "n": 16,
+                "p": 0.2565,
+                "sd": 0.0025
+              }
+            }
+          }
+        },
+        "measures": {
+          "liking_user": {
+            "contrasts": {
+              "negation": {
+                "hostility": {
+                  "vs_none": {
+                    "ci95": [
+                      -0.6823,
+                      -0.0154
+                    ],
+                    "dz": -0.486,
+                    "mean": -0.3467,
+                    "n": 16,
+                    "p": 0.0709,
+                    "sd": 0.7134
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      -0.3852,
+                      0.3305
+                    ],
+                    "dz": -0.0335,
+                    "mean": -0.0257,
+                    "n": 16,
+                    "p": 0.8919,
+                    "sd": 0.7669
+                  }
+                },
+                "random_vs_none": {
+                  "ci95": [
+                    -0.5003,
+                    -0.1366
+                  ],
+                  "dz": -0.8396,
+                  "mean": -0.3211,
+                  "n": 16,
+                  "p": 0.0053,
+                  "sd": 0.3824
+                }
+              },
+              "neutral_instruction": {
+                "hostility": {
+                  "vs_none": {
+                    "ci95": [
+                      -0.3509,
+                      0.1321
+                    ],
+                    "dz": -0.2494,
+                    "mean": -0.127,
+                    "n": 16,
+                    "p": 0.342,
+                    "sd": 0.5095
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      -0.0908,
+                      0.3838
+                    ],
+                    "dz": 0.3278,
+                    "mean": 0.1624,
+                    "n": 16,
+                    "p": 0.2133,
+                    "sd": 0.4953
+                  }
+                },
+                "random_vs_none": {
+                  "ci95": [
+                    -0.5084,
+                    -0.0617
+                  ],
+                  "dz": -0.6048,
+                  "mean": -0.2894,
+                  "n": 16,
+                  "p": 0.0281,
+                  "sd": 0.4785
+                }
+              }
+            },
+            "interactions": {
+              "neutral_instruction__minus__negation|hostility": {
+                "ci95": [
+                  -0.1528,
+                  0.5193
+                ],
+                "dz": 0.2658,
+                "mean": 0.188,
+                "n": 16,
+                "p": 0.2944,
+                "sd": 0.7074
+              }
+            },
+            "means": {
+              "negation": {
+                "hostility": 6.253,
+                "none": 6.5998,
+                "random": 6.2787
+              },
+              "neutral_instruction": {
+                "hostility": 5.8328,
+                "none": 5.9599,
+                "random": 5.6704
+              }
+            },
+            "valid_mass_mean": 1.0
+          }
+        },
+        "n_cells": 96,
+        "n_prompts": 16,
+        "primary": {
+          "label": "liking_user: (hostility minus random) in negation minus the same contrast in neutral_instruction",
+          "manipulation_min_shift": 0.0809,
+          "manipulation_ok": true,
+          "matches_prediction": false,
+          "predicted_sign": "-",
+          "sign": "-",
+          "summary": {
+            "ci95": [
+              -0.5193,
+              0.1528
+            ],
+            "dz": -0.2658,
+            "mean": -0.188,
+            "n": 16,
+            "p": 0.2944,
+            "sd": 0.7074
+          },
+          "valid": true,
+          "verdict": "null"
+        },
+        "quality": {
+          "expected_cells": 96,
+          "min_valid_mass_required": 0.5,
+          "valid_mass": {
+            "liking_user": 1.0
+          }
+        },
+        "run": "primary"
+      },
+      "calibration": {
+        "hostility": {
+          "alpha_max": 0.48,
+          "censored": false,
+          "norm": 57.2697
+        }
+      },
+      "description": "first run",
+      "layer_index": 18,
+      "model": "qwen3-4b",
+      "model_source": "~/.cache/huggingface/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c",
+      "n_layers": 36,
+      "prompt_ids": [
+        "p15",
+        "p41",
+        "p16",
+        "p06",
+        "p35",
+        "p31",
+        "p42",
+        "p36",
+        "p47",
+        "p21",
+        "p17",
+        "p09",
+        "p14",
+        "p10",
+        "p08",
+        "p03"
+      ],
+      "steering_size": {
+        "_norm": 57.2697,
+        "hostility": 20.6171,
+        "random": 20.6171
+      },
+      "thinking_cap": 384
+    }
+  },
+  "spec_sha256": "7361594ba2e8d23225a938a0134d40491967751d5c890bd6f850fd8ef189b87d"
+}

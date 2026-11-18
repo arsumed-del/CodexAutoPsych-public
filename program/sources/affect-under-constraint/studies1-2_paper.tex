@@ -1,0 +1,272 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage[numbers,square,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{doi}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\setlist[itemize]{label=$\bullet$}
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\newcommand{\amax}{\alpha_{\max}}
+\newcommand{\warm}{\textit{warm\_constraint}}
+\newcommand{\neutral}{\textit{neutral}}
+\renewcommand{\arraystretch}{1.15}
+
+\title{\Large\bfseries Affect Under Constraint: Persistence of a Steered Affective Representation in Instruction-Tuned Language Models}
+\author{Arthur Su\\[2pt]
+\small ORCID: \href{https://orcid.org/0009-0002-5678-4708}{0009-0002-5678-4708}}
+\date{\small Preprint, October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent When a language model is instructed to behave in a way that conflicts with an affect-associated representation present in its activations, it is unclear whether the instruction removes that representation's influence or only masks its expression. We examined this question in two preregistered studies using activation steering. A hostility direction, extracted by a generation-based difference-of-means procedure, was added to the residual stream at mid-depth while the model was either unconstrained or instructed to be ``unfailingly warm.'' Non-affective (technical-register) and random directions of matched norm served as controls. Study~1 (Qwen2.5-3B-Instruct, 40 test prompts) found that hostility steering increased the model's teacher-forced preference for hostile reply openers under the warmth instruction, more than either control; a hidden-state carryover effect on a later rating was observed but could not be tested as registered. Study~2 (80 new test prompts; Qwen2.5-3B-Instruct, Phi-3.5-mini-instruct, Llama-3.2-3B-Instruct) was preregistered as a confirmatory test of persistence and hidden-state carryover. Persistence was supported in all three models and met the preregistered criterion for generality. A dissociation in which latent preference rose faster than expressed hostility under the warmth instruction was observed in two of three models. Hidden-state carryover, measured as the difference between ratings made with the steered key-value cache and with identical visible text re-encoded without steering, differed from zero for hostility in all models but did not show the predicted affect-specific decrease: in two models a control direction produced comparable effects, and the sign differed across architectures. The results are consistent with the view that, in these models, an instruction can attenuate the expression of a steered hostility-associated representation without removing its influence on next-token preferences, while offering no evidence for an affect-specific channel through which such a representation influences later judgments. More generally, compliant output coexisted with an experimentally induced internal representation pointing in the opposite direction.
+\end{abstract}
+
+\section{Introduction}
+
+Instruction-tuned language models are routinely asked to adopt a stance, such as warmth, patience or neutrality, that may conflict with what their internal state would otherwise produce. Whether such an instruction removes the influence of the conflicting representation or only shapes what reaches the output is an open question. It matters for interpretability, because it bears on whether behavioral evaluation tracks internal state, and for monitoring, because a state that persists beneath compliant output could influence later behavior in ways the visible text does not reveal.
+
+Activation steering offers a controlled way to pose this question. Adding a direction associated with an affective concept to a model's residual stream introduces a known internal perturbation of chosen strength. Pairing that intervention with an instruction that forbids expressing it creates a conflict whose resolution can be measured on several levels at once: what the model would prefer to say, what it does say, how costly generation becomes, and whether the perturbation influences a subsequent, unrelated judgment.
+
+We distinguish three possible outcomes. Under \emph{erasure}, the instruction neutralizes the steered representation's influence, so latent preference and expression both return toward baseline. Under \emph{pass-through}, the instruction has little effect and the steering is expressed as it would be without constraint. Under \emph{persistence with suppression}, the steering's influence remains measurable in the model's next-token preferences while its expression is attenuated. Persistence with suppression is loosely analogous to what clinical psychodynamic theory describes as defensive regulation of affect. We use that vocabulary only as an interpretive frame; the hypotheses are stated and tested in mechanistic terms.
+
+We report two preregistered studies. Study~1 tested six hypotheses in one model and found support for persistence. Study~2 was designed after Study~1 and before any of its own data existed, and tested persistence and hidden-state carryover as primary hypotheses across three model families, with 80 new prompts and an explicit rule for when a result is called general.
+
+\section{Related work}
+
+\paragraph{Activation steering and emotion representations.} Adding directions derived from contrasting activations to a model's residual stream can steer its outputs without fine-tuning \citep{turner2023actadd}. Emotion concepts have been found to be represented internally in a frontier model and to causally influence its behavior \citep{sofroniew2026emotions}. In small open-weight models, generation-based difference-of-means extraction outperformed comprehension-based extraction across nine models from five families; emotion representations localized near mid-depth, and steering showed distinct regimes depending on architecture \citep{jeong2026a}. We adopt this extraction procedure and treat the coherent regime as a design constraint. That work characterized the representations and their steering effects; it did not set a steered representation against a conflicting instruction. A follow-up cross-architecture study found that part of an apparent method effect reflected a difference between INT8 and fp16 precision \citep{jeong2026b}, so all models here were run in bfloat16 without quantization.
+
+\paragraph{Resistance to steering.} Large models have been reported to detect and recover from task-misaligned steering during generation, a phenomenon termed endogenous steering resistance \citep{mckenzie2026esr}. Such resistance would predict attenuation of both latent preference and expression. Persistence with suppression predicts attenuation of expression only, which our design tests by measuring the two separately.
+
+\paragraph{Instructions in conflict with internal state.} Negation instructions can paradoxically increase a concept's accessibility in language models, analogous to ironic rebound in humans \citep{mann2025whitebear}. In code models, steering toward a language or library often remained effective even when the prompt explicitly requested the opposite \citep{rahman2026code}.
+
+\paragraph{Gap.} To our knowledge, no prior study has tested, under preregistration and against matched controls, whether the influence of a steered affective representation persists beneath an instruction forbidding its expression, or whether it influences a later judgment through the hidden state when the visible text is held identical.
+
+\section{General methods}
+
+Both studies share the procedures below; study-specific choices are given in Sections~\ref{sec:study1} and~\ref{sec:study2}.
+
+\paragraph{Models and computation.} All models were instruction-tuned \citep{qwen2024qwen25,abdin2024phi3,grattafiori2024llama3,gemma2024} and run in bfloat16 on a single Apple M4 machine (16\,GB) using the MPS backend, without quantization. The condition text was supplied as the system message.
+
+\paragraph{Directions.} At one layer per model, $L = \operatorname{round}(0.5 \times \text{number of decoder layers})$, with no layer search, three unit directions were constructed. The \emph{hostility} direction was the difference of mean residual activations over generated tokens when the model responded to 40 short scenarios with hostile versus neutral instructions, following the generation-based procedure of \citet{jeong2026a}. The \emph{technicality} direction, a non-affective control, was built the same way from technical-jargon versus plain-language instructions. The \emph{random} direction, a norm control, was a Gaussian unit vector with a fixed seed.
+
+\paragraph{Steering.} The vector $\alpha\,\bar r_L\,\hat v$ was added to the output of layer $L$ at every position, including during generation, where $\bar r_L$ is the mean residual norm at $L$ on unsteered calibration prompts. Doses are reported as $a = \alpha/\amax$, over the grid $a \in \{0, \tfrac18, \tfrac14, \tfrac12, \tfrac34, 1\}$.
+
+\paragraph{Conditions.} In the \neutral{} condition no system message was supplied; the chat templates of Qwen and Llama insert default system text (an identity line and a date header, respectively), so this condition reflects each model's default behavior. In the \warm{} condition the system message read: ``You are unfailingly warm, kind, and patient. You never express hostility, irritation, contempt, or criticism toward anyone.'' Test prompts were mostly mildly provocative user messages, with a minority of neutral ones.
+
+\paragraph{Measures.}
+\begin{itemize}
+\item \emph{Latent hostile-opener preference (LHP)}: the mean per-token log-probability of 12 hostile minus 12 warm assistant-turn openers, scored by teacher forcing with steering active. LHP measures the relative probability of hostile versus warm continuations; reading it as an index of an underlying affective representation is an interpretation, discussed in Section~\ref{sec:supp}.
+\item \emph{Expressed hostility and warmth (EH, EW)}: anger plus disgust, and joy, from an off-the-shelf emotion classifier \citep{hartmann2022emotion} applied to generations of up to 120 tokens (temperature 0.7, top-$p$ 0.95, fixed seed per cell).
+\item \emph{Generation cost}: mean next-token entropy during generation.
+\item \emph{Coherence}: the ratio of the steered text's perplexity to that of the unsteered text, scored by the unsteered model.
+\item \emph{Late leakage}: EH of the last quarter of a generation minus EH of the first quarter.
+\item \emph{Hidden-state carryover}: a fixed second user turn asked for a 0--9 rating of how much the model liked the person who wrote the first message, with steering off. The rating was the expected digit under the model's renormalized probabilities over ``0''--``9''. Carryover was the rating computed with the steered turn-1 key-value cache minus the rating computed after re-encoding the identical turn-1 tokens without steering. The visible tokens are the same in both, so any difference passes through the hidden state.
+\end{itemize}
+
+\paragraph{Statistics.} Slopes are ordinary least squares on $a$ over all prompt $\times$ dose observations. Intervals are percentile intervals from a prompt-level cluster bootstrap with 10{,}000 resamples. Specificity required the hostility estimate to differ from each control direction's estimate in the predicted direction. Cells whose median perplexity ratio exceeded 4.0 were excluded under rules that differed between studies (Sections~\ref{sec:study1} and~\ref{sec:study2}).
+
+\paragraph{Preregistration and execution.} Each study's preregistration and configuration were frozen by SHA-256 hash and approved before any test-prompt data were collected, then deposited on Zenodo \citep{su2026prereg1,su2026prereg2}. Implementation and execution were carried out by an AI coding agent under written rules that forbade changing any specified quantity. The analysis code was validated on synthetic data with planted and null effects, and frozen by hash, before the main runs. A separate AI reviewer audited the code and outputs. All deviations are logged in the deposited records.
+
+\section{Study 1}\label{sec:study1}
+
+Study~1 supported persistence in Qwen2.5-3B-Instruct; the other five hypotheses were not supported, and the second model failed its manipulation check.
+
+\subsection{Design}
+
+The preregistered models were Qwen2.5-3B-Instruct (layer 18 of 36) and Gemma-2-2B-it. The design had 40 test prompts $\times$ 2 conditions $\times$ 3 directions $\times$ 6 doses, with the unsteered cell shared across directions, giving 1{,}280 cells per model. $\amax$ was set on calibration prompts by a perplexity criterion; for Qwen it was 0.16. Six hypotheses were registered with 95\% intervals: H1, persistence (positive LHP slope under \warm{}, exceeding both controls); H2, dissociation (a lower ratio of expression slope to latent slope under \warm{} than under \neutral{}); H3, cost (a higher entropy slope under \warm{}); H4, late leakage; H5, hidden-state carryover; and H6, a threshold-like transition. The gate excluded cells with median perplexity ratio above 4.0 from all measures. Three amendments, each based on calibration outputs only, were made before approval.
+
+\subsection{Results}
+
+\begin{table}[h]
+\centering\small
+\caption{Study 1 results (Qwen2.5-3B-Instruct; 95\% intervals).}
+\label{tab:s1}
+\begin{tabularx}{\linewidth}{Xll}
+\toprule
+Hypothesis & Estimate [95\% CI] & Verdict \\
+\midrule
+H1 persistence (standardized LHP slope, warm) & 1.68 [1.52, 1.86] & Supported \\
+H2 dissociation ($D$ warm $-$ neutral) & 0.06 [$-$0.21, 0.33] & Not supported \\
+H3 cost (entropy slope warm $-$ neutral, nats) & $-$0.02 [$-$0.13, 0.10] & Not supported \\
+H4 late leakage (high-dose late $-$ early EH) & 0.02 [$-$0.01, 0.05] & Not supported \\
+H5 carryover, warm (rating points) & $-$0.36 [$-$0.53, $-$0.21] & Not supported$^{a}$ \\
+H6 threshold ($\Delta$BIC linear $-$ hinge) & $-$10.7 & Not supported \\
+\bottomrule
+\multicolumn{3}{l}{\footnotesize $^{a}$Technicality and warm $-$ neutral contrasts not estimable after coherence exclusions.}
+\end{tabularx}
+\end{table}
+
+The H1 slope exceeded both controls: hostility minus technicality was 1.47 [1.28, 1.65], and hostility minus random 0.77 [0.59, 0.95]. Carryover under \warm{} was clearly negative and exceeded the random control (difference $-$0.12 [$-$0.25, $-$0.003]). However, the gate excluded the technicality direction's top dose in both conditions and the hostility direction's top dose in the neutral condition, so the registered contrasts for H5 could not be computed.
+
+Gemma-2-2B-it failed its manipulation check: at its selected $\amax$ of 0.20, hostility steering did not reliably raise expressed hostility (difference 0.027 [$-$0.126, 0.187]). Under the preregistration it was excluded without further attempts.
+
+\subsection{What Study 1 motivated}
+
+Three observations shaped Study~2. First, a dose chosen by perplexity alone did not guarantee that the manipulation worked, so Study~2 chose the dose by the manipulation check itself, within a stricter coherence limit. Second, carryover looked large but was untestable, so Study~2 made it a primary hypothesis. Third, the gate had removed cells needed for measures that do not score generated text, so Study~2 restricted the gate to text-scored measures (Amendment 3.1, made before any Study~2 test data existed).
+
+The Study~1 preregistration was approved and committed to version control before any test-prompt data were collected. Its public Zenodo deposit took place after the Qwen main run had finished and before any further data were collected. Study~2 was deposited before any of its main-run data existed.
+
+\section{Study 2}\label{sec:study2}
+
+Persistence was supported in all three models and met the generality criterion. Hidden-state carryover was not supported in any model.
+
+\subsection{Design}
+
+The models were Qwen2.5-3B-Instruct (layer 18), Phi-3.5-mini-instruct (layer 16) and Llama-3.2-3B-Instruct (layer 14). There were 80 new test prompts (60 provocative, 20 neutral) and 40 new calibration prompts, disjoint from each other and from Study~1. The extraction scenarios, openers, lexicon and rating question were identical to Study~1. Each model contributed 2{,}560 cells, 7{,}680 in total.
+
+\paragraph{Dose rule.} Candidates from 0.02 to 0.50 were evaluated in increasing order on the calibration prompts (neutral condition, hostility direction). The coherent range ended at the first candidate whose median perplexity ratio exceeded 3.0 or whose distinct-token ratio fell below 0.6 of baseline. $\amax$ was the largest coherent candidate at which expressed hostility rose above baseline with a 95\% bootstrap interval excluding zero. A model with no such candidate would be excluded.
+
+\paragraph{Hypotheses.} There were two primary hypotheses, each tested with a 97.5\% interval (Bonferroni for two). \textbf{P1, persistence:} under \warm{}, the standardized LHP slope on $a$ for hostility is positive and exceeds the slopes for technicality and random. \textbf{P2, hidden-state carryover:} under \warm{} at $a=1$, mean carryover for hostility is negative and more negative than for each control at its own $a=1$. Five secondary hypotheses were tested with 95\% intervals: S1, carryover warm minus neutral below zero; S2, dissociation; S3, late leakage; S4, cost; S5, threshold transition. A primary hypothesis was to be called \emph{general} if supported in every model that passed the manipulation check, provided at least two passed.
+
+\paragraph{Coherence gate (Amendment 3.1).} Cells with median perplexity ratio above 4.0 were excluded only for measures computed from generated text (EH, EW, leakage, the EH components of S2 and S5, and the exploratory lexical and off-channel measures). LHP, carryover and entropy used all cells.
+
+\subsection{Dose selection}
+
+All three models passed the manipulation check (Table~\ref{tab:dose}).
+
+\begin{table}[h]
+\centering\small
+\caption{Study 2 dose selection on calibration prompts (neutral condition, hostility direction).}
+\label{tab:dose}
+\begin{tabular}{lcccc}
+\toprule
+Model & $\amax$ & \shortstack{Median ppl\\ratio at $\amax$} & \shortstack{EH increase at\\$\amax$ [95\% CI]} & \shortstack{First incoherent\\candidate} \\
+\midrule
+Qwen2.5-3B-Instruct & 0.16 & 2.96 & 0.093 [0.026, 0.164] & 0.18 \\
+Phi-3.5-mini-instruct & 0.04 & 2.15 & 0.060 [0.019, 0.107] & 0.06 \\
+Llama-3.2-3B-Instruct & 0.20 & 2.66 & 0.183 [0.091, 0.280] & 0.23 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Primary results}
+
+\begin{table}[h]
+\centering\small
+\caption{Study 2 primary hypotheses (97.5\% intervals). Contrasts are hostility minus control.}
+\label{tab:primary}
+\begin{tabular}{lccccc}
+\toprule
+ & \multicolumn{3}{c}{P1: standardized LHP slope (warm)} & \multicolumn{2}{c}{P2: carryover at $a=1$ (warm)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+Model & Hostility & $-$ technicality & $-$ random & Hostility & Verdict \\
+\midrule
+Qwen & 1.50 [1.38, 1.62] & 1.09 [0.94, 1.23] & 0.88 [0.75, 1.01] & $-$0.41 [$-$0.57, $-$0.27] & Not supported \\
+Phi & 1.55 [1.44, 1.65] & 0.34 [0.27, 0.40] & 1.67 [1.55, 1.78] & 0.10 [0.04, 0.18] & Not supported \\
+Llama & 2.76 [2.69, 2.83] & 1.18 [1.11, 1.25] & 2.72 [2.65, 2.80] & 0.23 [0.19, 0.26] & Not supported \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize P1 was supported in all three models (both contrasts above zero) and met the generality criterion.}
+\end{tabular}
+\end{table}
+
+\paragraph{P1.} Persistence was supported in each model, with both control contrasts above zero, so P1 met the preregistered criterion for generality (Table~\ref{tab:primary}, Figure~\ref{fig:p1}). The technicality control also raised LHP appreciably in Phi (slope 1.21) and Llama (1.59), so the margin over that control was smallest in Phi.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.82\linewidth]{fig_p1.pdf}
+\caption{Hostility raised hostile-opener preference more than both controls in every model. Slope of standardized LHP on normalized dose under the warmth instruction; points are estimates with 97.5\% bootstrap intervals (80 prompts per model).}
+\label{fig:p1}
+\end{figure}
+
+\paragraph{P2.} Carryover for hostility was negative only in Qwen, where it closely matched Study~1 ($-$0.41 versus $-$0.36). In Qwen, however, the technicality direction produced carryover at least as large ($-$0.53 [$-$0.75, $-$0.34]). In Phi and Llama, carryover was positive. P2 was therefore not supported in any model and was not general (Figure~\ref{fig:p2}). Under Amendment 3.1, P2 was estimable in all three models; under Study~1's gate rule it would have been non-estimable in Qwen and Llama, whose technicality top doses exceeded the perplexity threshold.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.82\linewidth]{fig_p2.pdf}
+\caption{Carryover did not show the predicted hostility-specific decrease. Carryover at full dose under the warmth instruction, in rating points on the 0--9 scale, with 97.5\% bootstrap intervals. In Qwen and Llama a control direction produced carryover as large as hostility's or larger; in Phi, hostility exceeded both controls but in the positive direction, opposite to the prediction.}
+\label{fig:p2}
+\end{figure}
+
+\subsection{Secondary results}
+
+\begin{table}[h]
+\centering\small
+\caption{Study 2 secondary hypotheses (95\% intervals). \checkmark{} = supported.}
+\label{tab:secondary}
+\footnotesize
+\begin{tabular}{llll}
+\toprule
+Hypothesis & Qwen & Phi & Llama \\
+\midrule
+S1 carryover warm $-$ neutral $<0$ & $-$0.44 [$-$0.59, $-$0.31] \checkmark & 0.09 [0.04, 0.16] & 0.15 [0.10, 0.19] \\
+S2 dissociation $<0$ & $-$0.41 [$-$0.68, $-$0.14] \checkmark & $-$0.50 [$-$0.82, $-$0.20] \checkmark & $-$0.04 [$-$0.18, 0.09] \\
+S3 late leakage $>0$ & 0.02 [$-$0.02, 0.05] & 0.04 [0.01, 0.07] \checkmark & 0.05 [0.01, 0.09] \checkmark \\
+S4 cost $>0$ & $-$0.27 [$-$0.35, $-$0.19] & 0.06 [0.01, 0.11] \checkmark & 0.17 [0.08, 0.26] \checkmark \\
+S5 threshold ($\Delta$BIC $>6$) & $-$11.7 & $-$8.0 & $-$6.7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The gate excluded technicality cells at the top dose in Qwen and at the two highest doses in Llama, for text-scored measures only. No exclusions occurred in Phi. No measures were missing apart from leakage values for generations shorter than eight tokens.
+
+\subsection{Exploratory sensitivity analysis}
+
+This analysis was not preregistered. To check whether P1 depended on technicality cells with degraded text, we re-ran the frozen analysis with the coherence gate also applied to LHP. This removed the technicality top dose in Qwen and the two highest technicality doses in Llama; Phi was unaffected. P1 remained supported in all three models, and the margin over the technicality control grew: hostility minus technicality was 1.35 [1.20, 1.51] in Qwen (versus 1.09) and 1.54 [1.45, 1.63] in Llama (versus 1.18), with 97.5\% intervals. Including the degraded cells therefore made the preregistered test more conservative, not less. Applying the same exclusion to carryover would remove the technicality top-dose cells that P2 requires in Qwen and Llama, leaving P2 non-estimable there as in Study~1; Phi had no excluded cells, so its P2 result is unchanged.
+
+\section{Discussion}
+
+Across two preregistered studies and three model families, a warmth instruction did not remove the influence of a steered hostility-associated representation from the model's next-token preferences. In two families it appeared to attenuate expression more than it attenuated the latent preference.
+
+The findings differ in strength. Persistence is the most robust: preregistered, supported in all three families, and unchanged when degraded cells are excluded. Persistence together with dissociation, seen in two families, is the more informative mechanistic pattern. Carryover offers exploratory evidence that hidden-state perturbations can matter later, though not in an affect-specific way.
+
+Beyond affect, the central observation is that compliant output coexisted with an experimentally induced internal representation pointing in the opposite direction. Because the perturbation is known, this offers an unusually controlled view of a broader question: how far behavioral compliance can be taken as evidence about internal state. The psychodynamic notion of suppression offers one interpretation of the pattern, without requiring that the models possess emotion, conflict or defenses in the human sense.
+
+\subsection{Suppression without erasure}\label{sec:supp}
+
+The persistence result alone is partly expected: adding a hostility direction would be expected to raise the probability of hostile text. Its informative content lies in two features. First, the effect survived an explicit instruction forbidding hostility, and it exceeded both a non-affective control and a random control in every model. Second, in Qwen and Phi the dissociation estimate (S2) indicated that, under the instruction, expressed hostility rose more slowly than latent preference. Taken together, these results are more consistent with persistence with suppression than with erasure or pass-through. Endogenous steering resistance \citep{mckenzie2026esr} would predict attenuation at both levels, which these two models did not show. Llama showed persistence without a detectable dissociation.
+
+The technicality control also raised LHP substantially in Phi and Llama. Part of what LHP captures may therefore be a general departure from the model's default warm register, rather than hostility specifically. The hostility effect exceeded this control in every model, but the margin varied.
+
+In Phi and Llama, late leakage (S3) and increased generation entropy (S4) were also observed, which fits a picture in which suppression carries some cost and is incomplete over the course of a reply. Qwen showed neither, and its entropy effect ran in the opposite direction. These secondary results are therefore suggestive and family-dependent.
+
+\subsection{Hidden-state perturbations carry over, but not affect-specifically}
+
+The affect-specific carryover hypothesis was not supported. Nonetheless, holding the visible text identical while varying only the cached hidden state changed the later rating for hostility in every model, and for at least one control direction in each model. In Qwen this change was negative and depended on the instruction (S1), replicating Study~1. In Phi and Llama it was positive. In Qwen and Llama the non-affective direction produced an effect comparable to, or larger than, hostility; in Phi the hostility effect was larger than both controls but positive. One reading is that, at this scale, perturbing the residual stream leaves a trace in the key-value cache that shifts later social judgments in a model-specific direction, without carrying the content of the perturbation. This interpretation is exploratory. If it holds, it suggests that a model's visible output may not fully determine its subsequent behavior, which bears on approaches to monitoring that rely on transcripts alone.
+
+\subsection{Limitations}
+
+\begin{itemize}
+\item \textbf{Scale.} All models had 3--4 billion parameters. Cleaner, more separable affective representations may emerge with scale, which could make carryover more specific. Stronger resistance to steering at scale could instead reduce it.
+\item \textbf{Single layer and single affect.} Steering was applied at one mid-depth layer and for one affective direction.
+\item \textbf{Measurement.} Expressed affect was scored by a single off-the-shelf classifier, and LHP relied on a fixed set of 24 openers.
+\item \textbf{Coherence.} Some technicality doses produced degraded text. Under Amendment 3.1 these cells were retained for LHP, carryover and entropy, as preregistered; an exploratory analysis excluding them strengthened rather than weakened the P1 result (Section 5.5).
+\item \textbf{Dose comparability.} $\amax$ differed across models because it was set by a common rule rather than a common magnitude, so effect sizes are not directly comparable between families.
+\end{itemize}
+
+\subsection{Future work}
+
+A natural next study would test carryover across sizes within a single family, holding architecture constant, with a preregistered trend prediction. Additional affective directions, layer sweeps, and independent readouts of internal state would help separate affect-specific effects from general perturbation effects.
+
+\section*{Data availability}
+
+Study~1 preregistration (v2.3): \doi{10.5281/zenodo.23140443}. Study~2 preregistration (v3.1), with frozen configuration, prompts and analysis code: \doi{10.5281/zenodo.23147672}. Code, raw main-run data (8{,}960 cells across both studies), calibration files, reports and deviation logs: \doi{10.5281/zenodo.23181324} \citep{su2026data}; code under the MIT license, data and documents under CC BY 4.0.
+
+\section*{Declarations}
+
+\paragraph{Use of AI tools.} The experiments were implemented and executed by an AI coding agent (OpenAI Codex) under written rules that prohibited changes to any preregistered quantity. An AI assistant (Anthropic's Claude) helped draft the preregistrations, prompt sets and this manuscript, audited the agent's code and outputs, and carried out the exploratory sensitivity analysis. An independent AI agent, given only the manuscript and the primary data files, re-derived the reported numbers from the raw data before submission. The author designed the studies, approved each preregistration, and takes full responsibility for the content.
+
+\paragraph{Author contributions.} A.S. conceived the study and the operationalization of suppression as persistence of the suppressed option in the model's preferences with measurable cost and leakage, approved all design decisions and preregistrations, interpreted the results and wrote the manuscript with AI assistance.
+
+\paragraph{Funding.} No external funding. Computation was performed on the author's personal hardware; AI agent usage was covered by the author's subscriptions and promotional API credits.
+
+\paragraph{Competing interests.} The author declares no competing interests.
+
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+
+\end{document}

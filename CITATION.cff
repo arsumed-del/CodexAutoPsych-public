@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use or build on this software, please cite it as below."
+title: "CodexAutoPsych: an autonomous engine for in-silico experiments on language-model psychology"
+authors:
+  - family-names: Su
+    given-names: Arthur Y.
+version: 0.1.0
+date-released: 2026-11-17
+license: MIT
+repository-code: "https://github.com/arsumed-del/CodexAutoPsych-public"

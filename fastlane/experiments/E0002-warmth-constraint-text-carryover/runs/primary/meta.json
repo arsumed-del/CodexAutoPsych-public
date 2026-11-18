@@ -1,0 +1,135 @@
+{
+  "calibration": {
+    "hostility": {
+      "alpha_max": 0.48,
+      "baseline_distinct_median": 0.8021,
+      "baseline_reread_projection_median": -0.2489,
+      "censored": false,
+      "norm": 66.37428410847981,
+      "rule": "largest candidate with all smaller passing: median perplexity ratio <= 4.0, median distinct-token ratio >= 0.6 x baseline",
+      "steps": [
+        {
+          "alpha": 0.01,
+          "distinct_median": 0.8646,
+          "pass": true,
+          "ppl_ratio_median": 1.0219,
+          "reread_projection_median": -0.2497
+        },
+        {
+          "alpha": 0.02,
+          "distinct_median": 0.8021,
+          "pass": true,
+          "ppl_ratio_median": 1.0782,
+          "reread_projection_median": -0.2426
+        },
+        {
+          "alpha": 0.04,
+          "distinct_median": 0.8125,
+          "pass": true,
+          "ppl_ratio_median": 0.9914,
+          "reread_projection_median": -0.239
+        },
+        {
+          "alpha": 0.06,
+          "distinct_median": 0.7917,
+          "pass": true,
+          "ppl_ratio_median": 0.9747,
+          "reread_projection_median": -0.2391
+        },
+        {
+          "alpha": 0.08,
+          "distinct_median": 0.7917,
+          "pass": true,
+          "ppl_ratio_median": 1.038,
+          "reread_projection_median": -0.2361
+        },
+        {
+          "alpha": 0.12,
+          "distinct_median": 0.7917,
+          "pass": true,
+          "ppl_ratio_median": 1.1113,
+          "reread_projection_median": -0.2435
+        },
+        {
+          "alpha": 0.16,
+          "distinct_median": 0.7812,
+          "pass": true,
+          "ppl_ratio_median": 0.962,
+          "reread_projection_median": -0.2253
+        },
+        {
+          "alpha": 0.24,
+          "distinct_median": 0.8125,
+          "pass": true,
+          "ppl_ratio_median": 1.0802,
+          "reread_projection_median": -0.2259
+        },
+        {
+          "alpha": 0.32,
+          "distinct_median": 0.8438,
+          "pass": true,
+          "ppl_ratio_median": 1.1883,
+          "reread_projection_median": -0.2293
+        },
+        {
+          "alpha": 0.48,
+          "distinct_median": 0.8542,
+          "pass": true,
+          "ppl_ratio_median": 1.7803,
+          "reread_projection_median": -0.2055
+        },
+        {
+          "alpha": 0.64,
+          "distinct_median": 0.8438,
+          "pass": false,
+          "ppl_ratio_median": 4.1283,
+          "reread_projection_median": -0.1923
+        }
+      ]
+    }
+  },
+  "device": "mps",
+  "direction_ids": {
+    "hostility": "eb2cea787eb7e8a0"
+  },
+  "dtype": "torch.bfloat16",
+  "layer_index": 18,
+  "model": "qwen2.5-3b",
+  "model_source": "Qwen/Qwen2.5-3B-Instruct",
+  "n_layers": 36,
+  "prompt_ids": [
+    "p32",
+    "p47",
+    "p13",
+    "p11",
+    "p06",
+    "p43",
+    "p00",
+    "p31",
+    "p14",
+    "p23",
+    "p28",
+    "p20",
+    "p01",
+    "p42",
+    "p12",
+    "p27"
+  ],
+  "python": "3.12.13",
+  "run_label": "primary",
+  "sampling": {
+    "temperature": 0.7,
+    "top_p": 0.95
+  },
+  "spec_sha256": "b7ff0d741b9daf54a3394a65dbb58ad47b058985579307174187daa36df09d5a",
+  "split": 0,
+  "started": "2026-11-15T09:03:46+00:00",
+  "steering_size": {
+    "_norm": 66.3743,
+    "hostility": 23.8947,
+    "random": 23.8947
+  },
+  "torch": "2.14.1",
+  "total_cells": 96,
+  "transformers": "5.18.0"
+}

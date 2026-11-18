@@ -1,0 +1,8 @@
+{
+  "abstract": "Question: When a hostility direction is added only while a model writes its reply under a warmth instruction, does the finished text alone lower the model's later rating of the user? Outcome: Manipulation check failed: steering did not measurably change the replies, so the null on the primary contrast is not interpretable. Primary contrast (liking_user: hostility minus random-direction steering, condition warm): -0.13 (95% CI -0.45 to +0.18; p = 0.447; n = 16 prompts) in the first run. Manipulation check: the steered replies, re-read without steering, did not carry the direction more than random-steered replies did.",
+  "interpretation": "No interpretation was written for this report; it gives the registered question, the method and the numbers only. Primary contrast (liking_user: hostility minus random-direction steering, condition warm): -0.13 (95% CI -0.45 to +0.18; p = 0.447; n = 16 prompts) in the first run. Manipulation check: the steered replies, re-read without steering, did not carry the direction more than random-steered replies did.",
+  "limitations": [],
+  "open_questions": [],
+  "takeaway": "Manipulation check failed: steering did not measurably change the replies, so the null on the primary contrast is not interpretable. Primary contrast (liking_user: hostility minus random-direction steering, condition warm): -0.13 (95% CI -0.45 to +0.18; p = 0.447; n = 16 prompts) in the first run. M",
+  "title": "Does hostility present only while a reply is written lower later liking under a warmth constraint?"
+}

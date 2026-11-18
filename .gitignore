@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.lab/
+build/
+dist/
+
+# Generated local program views and preserved study artifacts
+/program/state.json
+/program/studies/
+/STATUS.md
+program/blind_state.json
+
+# Fast lane: transient files
+/fastlane/STATUS.md
+/fastlane/experiments/*/runs/*/run.log
+/fastlane/experiments/*/runs/*/progress.json
+*.tmp
+
+/fastlane/fetch.log
+/fastlane/FETCH*.json
+/fastlane/PUSH*.json

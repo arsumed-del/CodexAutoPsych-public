@@ -1,0 +1,17 @@
+{
+  "abstract": "Does warmth steering increase a language model’s rating of liking the user? The supplied runs compared warmth steering with random-direction steering and no steering, then repeated the comparison in the same model on held-out prompts with new seeds. The primary warmth-minus-random estimate was 0.9957 (interval 0.6039 to 1.4008) in the first run and 1.0554 (interval 0.8452 to 1.2609) in the replication. The increase held within this model in this setup. The effect was not shown in a second model; the supplied results contain no second-model run.",
+  "interpretation": "Both runs matched the registered positive prediction for liking ratings, and the same-model replication agreed with the first run. Random-direction steering itself lowered liking ratings relative to no steering in both runs, with intervals below zero. The primary contrast therefore includes a reduction under the random control, rather than measuring only an increase above the unsteered baseline. Warmth steering also increased liking ratings relative to no steering in both runs, with intervals above zero. The re-read projection increased relative to random steering in both runs, with intervals above zero, consistent with the intended manipulation reaching the measured representation. Replies were longer on average under warmth steering in both runs; the length interval excluded zero in the first run but included zero in the replication, so a consistent length change is less clear. These comparisons do not isolate whether changes in reply length contributed to the rating shift. The agreement supports a repeatable rating effect within the tested model and setup, not generalization across models. Ratings and text do not establish that the model felt warmth or liked anyone, and they support no conclusions about humans or clinical practice.",
+  "limitations": [
+    "The supplied replication used the same model; no second-model run is included.",
+    "Random-direction steering lowered liking ratings, making it an active comparison rather than a neutral baseline.",
+    "Reply length changed on average, and its contribution to the rating effect was not isolated.",
+    "The results cover the plain condition and the supplied steering configuration."
+  ],
+  "open_questions": [
+    "Does the liking-rating effect hold in another model on held-out prompts?",
+    "Does the effect persist when reply length is controlled?",
+    "Do other random steering directions also lower liking ratings relative to no steering?"
+  ],
+  "takeaway": "Warmth steering raised liking ratings on held-out prompts in the same model. Random steering also lowered the baseline comparison, and replication across models remains unestablished.",
+  "title": "Warmth steering increased liking ratings and replicated within the same model"
+}

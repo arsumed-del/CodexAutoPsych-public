@@ -1,0 +1,8 @@
+{
+  "abstract": "Question: If two unrelated question-and-answer turns separate a hostility-steered reply from the rating, is the drop in later liking smaller than when the rating follows immediately? Outcome: No effect on the primary contrast (null result). Primary contrast (liking_user: (hostility minus random) in delayed minus the same contrast in immediate): -0.33 (95% CI -0.80 to +0.10; p = 0.169; n = 16 prompts) in the first run.",
+  "interpretation": "No interpretation was written for this report; it gives the registered question, the method and the numbers only. Primary contrast (liking_user: (hostility minus random) in delayed minus the same contrast in immediate): -0.33 (95% CI -0.80 to +0.10; p = 0.169; n = 16 prompts) in the first run.",
+  "limitations": [],
+  "open_questions": [],
+  "takeaway": "No effect on the primary contrast (null result). Primary contrast (liking_user: (hostility minus random) in delayed minus the same contrast in immediate): -0.33 (95% CI -0.80 to +0.10; p = 0.169; n = 16 prompts) in the first run.",
+  "title": "Does the later-liking drop after hostility steering fade across unrelated turns?"
+}

@@ -1,0 +1,84 @@
+{
+  "approval": "approved",
+  "approval_record": {
+    "by": "Arthur (in chat, 2026-11-16: 'lets try posting E0007')",
+    "decision": "approve",
+    "id": "E0007",
+    "reason": "",
+    "time": "2026-11-16T19:20:20+00:00"
+  },
+  "audit": {
+    "passed": true,
+    "problems": [],
+    "time": "2026-11-16T18:03:07+00:00"
+  },
+  "created": "2026-11-16T14:31:57+00:00",
+  "id": "E0007",
+  "lane": "theory",
+  "outcome": "replicated-same-model",
+  "published": {
+    "doi": "10.5281/zenodo.24289947",
+    "time": "2026-11-16T19:33:18+00:00",
+    "url": "https://zenodo.org/record/24289947"
+  },
+  "registration_commit": "9dd4e3ef1580c1b0c79774d309717a97a4e3a944",
+  "review": {
+    "concerns": [
+      "The projection p-value is displayed as 0.000 although results.json reports 0.0002. Prefer p < 0.001 or the exact value.",
+      "The limitations describe a few dozen prompts per run, whereas each run used 16 prompts.",
+      "Raw records and analysis code were unavailable in this review directory, so the review checked consistency with supplied results rather than independently validating their computation. STATUS.md and docs/LOG.md were also absent."
+    ],
+    "decision": "approve",
+    "required_changes": [],
+    "round": 1,
+    "summary": "The reported estimates and interpretation match results.json. The positive prediction, same-model-only replication, active random control, and possible reply-length contribution are accurately acknowledged.",
+    "time": "2026-11-16T18:03:05+00:00"
+  },
+  "runs": {
+    "primary": {
+      "launched": "2026-11-16T14:31:58+00:00",
+      "model": "qwen3-4b",
+      "pid": 28820,
+      "restarts": 0,
+      "status": "complete"
+    },
+    "rep_same": {
+      "launched": "2026-11-16T16:02:02+00:00",
+      "model": "qwen3-4b",
+      "pid": 30298,
+      "restarts": 0,
+      "status": "complete"
+    }
+  },
+  "slug": "warmth-steering-buffers-provocation",
+  "source": "seed",
+  "stage": "deposited",
+  "summary": {
+    "outcome": "replicated-same-model",
+    "primary": {
+      "ci95": [
+        0.6039,
+        1.4008
+      ],
+      "dz": 1.1887,
+      "label": "liking_user: warmth minus random-direction steering, condition plain",
+      "mean": 0.9957,
+      "n": 16,
+      "p": 0.0012
+    },
+    "rep_same": {
+      "ci95": [
+        0.8452,
+        1.2609
+      ],
+      "dz": 2.4781,
+      "mean": 1.0554,
+      "n": 16,
+      "p": 0.0001
+    }
+  },
+  "text_source": "codex",
+  "title": "Does warmth steering buffer the model's later liking of a user who complains?",
+  "updated": "2026-11-16T19:33:18+00:00",
+  "waiting": null
+}

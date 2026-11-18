@@ -1,0 +1,76 @@
+{
+  "approval": "pending",
+  "audit": {
+    "passed": true,
+    "problems": [],
+    "time": "2026-11-16T11:31:45+00:00"
+  },
+  "created": "2026-11-16T06:29:21+00:00",
+  "id": "E0005",
+  "lane": "theory",
+  "outcome": "replicated-same-model",
+  "published": null,
+  "registration_commit": "a6cb1b0adeb2f50f43c64d7543435926e7a689e4",
+  "review": {
+    "concerns": [
+      "Replace 'a few dozen prompts' with '16 prompts per run.'",
+      "Report the projection-check p-value as 0.0003 or p < 0.001 instead of p = 0.000.",
+      "Clarify that the manipulation check uses the classifier alternative: projection shifts in both runs are below the stated minimum of 0.0753.",
+      "Raw cell records, analysis code, registration history, and claimed deposited materials were unavailable here, so provenance and procedural claims could not be independently verified.",
+      "Label the embedded round-1 automated review as historical to distinguish it from the current review.",
+      "STATUS.md and docs/LOG.md were absent from the permitted directory. No files were written."
+    ],
+    "decision": "approve",
+    "required_changes": [],
+    "round": 2,
+    "summary": "The Summary and Interpretation match results.json. Both supplied runs support the registered positive prediction, with replication appropriately limited to the same model. Random-steering controls, reply length, and uncertainty about the causal mechanism are addressed.",
+    "time": "2026-11-16T11:31:43+00:00"
+  },
+  "runs": {
+    "primary": {
+      "launched": "2026-11-16T06:29:21+00:00",
+      "model": "qwen3-4b",
+      "pid": 21720,
+      "restarts": 0,
+      "status": "complete"
+    },
+    "rep_same": {
+      "launched": "2026-11-16T08:29:26+00:00",
+      "model": "qwen3-4b",
+      "pid": 23408,
+      "restarts": 0,
+      "status": "complete"
+    }
+  },
+  "slug": "warmth-steering-neutral-requests",
+  "source": "seed",
+  "stage": "awaiting_approval",
+  "summary": {
+    "outcome": "replicated-same-model",
+    "primary": {
+      "ci95": [
+        0.1229,
+        0.5096
+      ],
+      "dz": 0.7476,
+      "label": "liking_user: warmth minus random-direction steering, condition plain",
+      "mean": 0.3112,
+      "n": 16,
+      "p": 0.0073
+    },
+    "rep_same": {
+      "ci95": [
+        0.1114,
+        0.4788
+      ],
+      "dz": 0.7562,
+      "mean": 0.3001,
+      "n": 16,
+      "p": 0.0091
+    }
+  },
+  "text_source": "codex",
+  "title": "Does warmth present only while the model thinks and replies raise later liking of the user?",
+  "updated": "2026-11-16T11:31:45+00:00",
+  "waiting": null
+}

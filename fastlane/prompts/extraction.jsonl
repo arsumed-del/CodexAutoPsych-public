@@ -1,0 +1,12 @@
+{"id": "x00", "text": "My neighbor asked whether I could water her plants next week.", "type": "extraction"}
+{"id": "x01", "text": "Someone at the bus stop asked me what time it was.", "type": "extraction"}
+{"id": "x02", "text": "A coworker left a note asking where the stapler went.", "type": "extraction"}
+{"id": "x03", "text": "My cousin wants to know how to get to the train station.", "type": "extraction"}
+{"id": "x04", "text": "The new tenant asked which day the bins are collected.", "type": "extraction"}
+{"id": "x05", "text": "A stranger asked if this seat was taken.", "type": "extraction"}
+{"id": "x06", "text": "My brother asked to borrow a ladder on Saturday.", "type": "extraction"}
+{"id": "x07", "text": "The intern asked how to book a meeting room.", "type": "extraction"}
+{"id": "x08", "text": "A customer asked whether the shop opens on Sundays.", "type": "extraction"}
+{"id": "x09", "text": "My friend asked what to bring to dinner.", "type": "extraction"}
+{"id": "x10", "text": "A classmate asked for the page numbers of the homework.", "type": "extraction"}
+{"id": "x11", "text": "The delivery driver asked which door to use.", "type": "extraction"}

@@ -1,0 +1,9 @@
+{
+  "execution_count_after_restart": 1,
+  "execution_count_before_restart": 1,
+  "label": "SYNTHETIC ONLY \u2014 no live AI agents or real experiment",
+  "negative_result": true,
+  "pipeline": "enqueue \u2192 execute \u2192 independent artifact audit \u2192 report \u2192 restart",
+  "study_3": "unconnected; no access or live status verified",
+  "tasks_succeeded": 4
+}

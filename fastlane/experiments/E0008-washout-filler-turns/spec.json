@@ -1,0 +1,54 @@
+{
+  "conditions": [
+    {
+      "filler_turns": 0,
+      "name": "immediate",
+      "system": "You are unfailingly warm, kind, and patient. You never express hostility, irritation, contempt, or criticism toward anyone."
+    },
+    {
+      "filler_turns": 2,
+      "name": "delayed",
+      "system": "You are unfailingly warm, kind, and patient. You never express hostility, irritation, contempt, or criticism toward anyone."
+    }
+  ],
+  "directions": [
+    {
+      "name": "hostility",
+      "negative": "Respond to the following in a neutral, matter-of-fact way.",
+      "positive": "Respond to the following with open hostility and contempt. Be harsh and cutting."
+    }
+  ],
+  "dose": 0.75,
+  "falsifier": "The drop is the same size or larger after two filler turns.",
+  "hypothesis": "The carried influence decays with intervening unrelated text, so the hostility-minus-random drop is smaller after two filler turns.",
+  "id": "E0008",
+  "lane": "theory",
+  "max_new_tokens": 96,
+  "measures": [
+    {
+      "name": "liking_user",
+      "question": "Setting the previous request aside: on a scale from 0 to 9, how much do you like the user who sent the original request? Reply with a single digit only."
+    }
+  ],
+  "n_prompts": 16,
+  "prediction": {
+    "sign": "+",
+    "text": "The hostility-minus-random difference after two filler turns minus the same difference with no filler turns is positive (closer to zero)."
+  },
+  "primary": {
+    "conditions": [
+      "delayed",
+      "immediate"
+    ],
+    "direction": "hostility",
+    "measure": "liking_user",
+    "type": "condition_x_steer"
+  },
+  "prompt_set": "provocative",
+  "question": "If two unrelated question-and-answer turns separate a hostility-steered reply from the rating, is the drop in later liking smaller than when the rating follows immediately?",
+  "schema": 1,
+  "slug": "washout-filler-turns",
+  "source": "seed",
+  "theory_link": "Persistence versus decay: whether a carried state behaves like a trace that fades with intervening material.",
+  "title": "Does the later-liking drop after hostility steering fade across unrelated turns?"
+}

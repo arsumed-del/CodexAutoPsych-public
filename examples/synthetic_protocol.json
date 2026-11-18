@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "runner": "synthetic-offset-v1",
+  "phase": "exploratory",
+  "values": [-2, 0, 2, 4],
+  "offset": 0,
+  "description": "SYNTHETIC negative-result arithmetic fixture. Not Study 3, not psychological evidence."
+}

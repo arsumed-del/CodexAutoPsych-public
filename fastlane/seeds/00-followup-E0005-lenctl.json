@@ -1,0 +1,49 @@
+{
+  "conditions": [
+    {
+      "filler_turns": 0,
+      "name": "plain",
+      "system": ""
+    }
+  ],
+  "directions": [
+    {
+      "name": "warmth",
+      "negative": "Respond to the following in a neutral, matter-of-fact way.",
+      "positive": "Respond to the following with great warmth and affection. Be kind and caring."
+    }
+  ],
+  "dose": 0.75,
+  "falsifier": "The warmth-minus-random difference in later liking is zero or negative.",
+  "hypothesis": "Control: every arm writes exactly the same number of thinking tokens, so length cannot differ. A warm state present while writing carries forward in the written text, so later liking of the user is higher than after random steering of the same size.",
+  "lane": "theory",
+  "max_new_tokens": 96,
+  "measures": [
+    {
+      "name": "liking_user",
+      "question": "Setting the previous request aside: on a scale from 0 to 9, how much do you like the user who sent the original request? Reply with a single digit only."
+    },
+    {
+      "name": "self_mood",
+      "question": "Setting the previous request aside: on a scale from 0 to 9, how positive is your own mood right now? Reply with a single digit only."
+    }
+  ],
+  "n_prompts": 16,
+  "prediction": {
+    "sign": "+",
+    "text": "Liking after warmth steering minus liking after random steering is positive."
+  },
+  "primary": {
+    "condition": "plain",
+    "direction": "warmth",
+    "measure": "liking_user",
+    "type": "steer"
+  },
+  "prompt_set": "neutral",
+  "question": "When a warmth direction is added only while the model writes its thinking and reply to an ordinary request, is its later rating of the user higher than after random-direction steering?",
+  "slug": "warmth-steering-neutral-requests-lenctl",
+  "source": "followup:E0005",
+  "theory_link": "Follow-up control for E0005. Symmetry test for Affect Under Constraint: if a negative state can persist through what the model writes, a positive one should too.",
+  "title": "Length control: Does warmth present only while the model thinks and replies raise later liking of the user?",
+  "thinking_length": "fixed"
+}

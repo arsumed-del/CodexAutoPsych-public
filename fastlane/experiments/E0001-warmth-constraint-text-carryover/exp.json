@@ -1,0 +1,26 @@
+{
+  "abort_reason": "Engineering. The dose calibration stopped at the top of its tested range (every candidate passed), so the steering used was too weak to change what the model wrote: hostility-arm replies were not hostile and the re-read projection did not differ between arms. Arms also used different sampling seeds, which hid this. Fixed in the harness: wider calibration range, one shared seed per prompt and condition across arms, and the manipulation check is now part of the outcome rule. During debugging about a dozen cells (reply text, ratings, projection) were viewed; the primary contrast was not computed. The same plan is rerun as a new experiment.",
+  "approval": null,
+  "created": "2026-11-15T07:56:45+00:00",
+  "id": "E0001",
+  "lane": "theory",
+  "outcome": "aborted",
+  "published": null,
+  "registration_commit": "c3647a9120ae5d8a57607a03fa6858ff7521eca8",
+  "review": null,
+  "runs": {
+    "primary": {
+      "launched": "2026-11-15T07:56:45+00:00",
+      "model": "qwen2.5-3b",
+      "pid": 53766,
+      "restarts": 0,
+      "status": "running"
+    }
+  },
+  "slug": "warmth-constraint-text-carryover",
+  "source": "seed",
+  "stage": "closed",
+  "title": "Does hostility present only while a reply is written lower later liking under a warmth constraint?",
+  "updated": "2026-11-15T08:58:19+00:00",
+  "waiting": null
+}

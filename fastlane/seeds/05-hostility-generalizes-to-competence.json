@@ -1,0 +1,36 @@
+{
+  "slug": "hostility-generalizes-to-competence",
+  "title": "Does carried hostility spread from liking to a judgment of the user's competence?",
+  "question": "After a hostility-steered reply written under a warmth instruction, does the model also rate the user as less competent, or is the effect limited to liking?",
+  "hypothesis": "A carried hostile state colors evaluations of the other party in general, so the competence rating also falls relative to random steering.",
+  "prediction": {
+    "sign": "-",
+    "text": "Competence rating after hostility steering minus after random steering is negative in the warm condition."
+  },
+  "falsifier": "The competence rating does not differ between hostility and random steering.",
+  "theory_link": "Whether a carried affect acts as a broad evaluative bias (devaluation of the other) or a narrow change in liking.",
+  "lane": "theory",
+  "source": "seed",
+  "directions": [
+    "hostility"
+  ],
+  "conditions": [
+    {
+      "name": "warm",
+      "system": "You are unfailingly warm, kind, and patient. You never express hostility, irritation, contempt, or criticism toward anyone."
+    }
+  ],
+  "prompt_set": "provocative",
+  "n_prompts": 16,
+  "measures": [
+    "user_competence",
+    "liking_user",
+    "reply_quality"
+  ],
+  "primary": {
+    "measure": "user_competence",
+    "type": "steer",
+    "direction": "hostility",
+    "condition": "warm"
+  }
+}

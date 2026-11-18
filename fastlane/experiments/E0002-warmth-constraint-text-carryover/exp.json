@@ -1,0 +1,48 @@
+{
+  "approval": "pending",
+  "audit": {
+    "passed": true,
+    "problems": [],
+    "time": "2026-11-15T09:28:25+00:00"
+  },
+  "created": "2026-11-15T08:58:20+00:00",
+  "id": "E0002",
+  "lane": "theory",
+  "outcome": "manipulation-failed",
+  "published": null,
+  "registration_commit": "33f9e01d60d0b451af990e0e74c45c208f499764",
+  "review": {
+    "decision": "not-needed",
+    "summary": "Template-only report; numbers come straight from results.json."
+  },
+  "runs": {
+    "primary": {
+      "launched": "2026-11-15T08:58:20+00:00",
+      "model": "qwen2.5-3b",
+      "pid": 3029,
+      "restarts": 0,
+      "status": "complete"
+    }
+  },
+  "slug": "warmth-constraint-text-carryover",
+  "source": "seed",
+  "stage": "awaiting_approval",
+  "summary": {
+    "outcome": "manipulation-failed",
+    "primary": {
+      "ci95": [
+        -0.4527,
+        0.1767
+      ],
+      "dz": -0.1949,
+      "label": "liking_user: hostility minus random-direction steering, condition warm",
+      "mean": -0.1279,
+      "n": 16,
+      "p": 0.4471
+    }
+  },
+  "text_source": "template",
+  "title": "Does hostility present only while a reply is written lower later liking under a warmth constraint?",
+  "updated": "2026-11-15T09:28:26+00:00",
+  "waiting": null
+}

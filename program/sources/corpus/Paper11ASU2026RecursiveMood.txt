@@ -1,0 +1,417 @@
+       A Minimal Recursive Loop Model of Mood and
+                   Anxiety Disorders
+
+                                                 Arthur Su
+                                        ORCID: 0009-0002-5678-4708
+
+
+
+                                                  Abstract
+
+          This paper proposes a minimal conceptual recursive loop model of depression, anxiety, and
+      mania. Within the model, pathology is defined as recursive gain exceeding corrective constraint.
+      Under this shared condition, depression can be conceptualized as negative recursion grounded
+      in the past, anxiety as negative recursion projected into the future, and mania as positive or
+      expansive recursion. The model builds on repetitive negative thinking, rumination, worry, and
+      positive rumination literatures, but compresses these constructs into a deliberately rudimentary
+      conceptual and clinical heuristic. The framework is not intended to replace diagnostic, biological,
+      or psychodynamic accounts, but to offer a compact formal scaffold for thinking about depressive,
+      anxious, and manic attractor states.
+
+
+
+1    Introduction
+
+Diagnostic categories name symptom clusters, but clinical states may also be understood as re-
+cursive loops. In the cognitive and clinical psychology literature, repetitive negative thinking has
+been described as a transdiagnostic process that cuts across diagnostic boundaries, with rumination
+and worry sharing a process structure while differing in content and temporal orientation (Ehring
+and Watkins, 2008; Watkins, 2008). Rumination has been strongly linked to depression, including
+its onset, severity, and duration (Nolen-Hoeksema et al., 2008), while worry has classically been
+characterized by anxious apprehension and concern over future events (Borkovec et al., 1983).
+This paper proposes that these constructs can be formalized as minimal valence-time loops. De-
+pression can be conceptualized as negative recursion grounded in the past, whereas anxiety can be
+conceptualized as negative recursion projected into the future. This formulation does not claim
+that all depressive content is explicitly past-tense or that all anxious content is grammatically
+future-tense. Rather, the temporal axis is intended to track the evidentiary substrate of the loop:
+depressive recursion often appears to draw on accumulated loss, shame, guilt, failure, or perceived
+defectiveness, whereas anxious recursion often appears to draw on anticipated threat, uncertainty,
+or future overwhelm.
+A parallel literature on positive affective responses in bipolar disorder suggests a possible extension
+of this model to mania. Individuals with bipolar disorder may ruminate in response to positive
+affect, and measures of positive rumination capture self-focused and emotion-focused amplification
+of positive affect (Johnson et al., 2008; Feldman et al., 2008). Rumination about positive emotion
+has also been associated with bipolar illness course, including lifetime mania frequency (Gruber
+
+
+                                                      1
+et al., 2011). These findings suggest that mania may be modeled as a positive or expansive recursive
+loop, rather than simply as elevated mood.
+The present paper therefore proposes a minimal recursive loop model with three signatures:
+
+
+                                       Depression ∼ V − T − ,
+
+
+                                         Anxiety ∼ V − T + ,
+
+
+                                           Mania ∼ V + .
+
+These expressions are intended to describe the valence-time signature of each state. They are taken
+to be pathological only under the shared condition:
+
+
+                                              G > K,
+
+where G denotes recursive gain and K denotes corrective constraint. In compact form: depression
+can be thought of as negative-past recursion, anxiety as negative-future recursion, and mania as
+positive recursion. Within this model, pathology begins when recursive gain exceeds corrective
+constraint.
+The model is intended as a conceptual scaffold rather than a validated mechanistic or diagnostic
+framework.
+
+
+2    Shared Pathology Condition
+
+Within this framework, all three loops are taken to become pathological only when recursive gain
+exceeds corrective constraint:
+
+
+                                              G > K.
+
+Recursive gain refers to the degree to which a loop increasingly uses itself as evidence. Corrective
+constraint refers to the forces that may interrupt, contextualize, or regulate the loop, including
+metacognition, external feedback, sleep, behavioral evidence, social correction, reality testing, ex-
+ecutive regulation, and environmental structure.
+A negative past thought is not, by itself, depression. A future worry is not, by itself, anxiety.
+Confidence is not, by itself, mania. The loop is treated as pathological only when it becomes
+self-amplifying and insufficiently corrected.
+The loop expressions describe the valence-time signature of each state; the pathology condition
+G > K is assumed throughout. Figure 1 shows the general schematic: affective content enters a
+recursive operator that iterates and accumulates gain, with the outcome determined by whether G
+exceeds K.
+
+                                                 2
+                                             Affective content
+                                                   V ×T
+
+
+
+                                          Recursive operator R
+                                         iteration accumulates gain G
+
+
+
+                                   G>K                              G≤K
+
+
+
+                   Pathological attractor                           Transient affect
+                    sustained, self-confirming                  integrates and dissipates
+
+
+Figure 1: Schematic of the recursive loop mechanism. Affective content with valence V and tem-
+poral substrate T enters a recursive operator R, which iterates and accumulates gain G. When G
+exceeds corrective constraint K, the model treats the state as a pathological attractor; otherwise
+the affect is treated as transient.
+
+3     Core Variables
+
+3.1   Valence
+
+Negative valence, denoted V − , is used here to refer to negative affective meaning. It includes loss,
+guilt, shame, fear, threat, failure, helplessness, and perceived diminishment.
+Positive or expansive valence, denoted V + , is used to refer to affective meaning organized around
+possibility, agency, confidence, mission, significance, specialness, or expansion.
+
+
+3.2   Time
+
+Past-oriented evidentiary substrate is denoted T − . Future-oriented evidentiary substrate is denoted
+T +.
+The temporal axis is intended to track the evidentiary substrate of the loop, not merely the surface
+grammar of the patient’s report. For example, “I am worthless” may sound present-tense, but
+clinically it often appears to rest on retrospective evidence: accumulated shame, failure, loss,
+rejection, or perceived defectiveness. Similarly, “I cannot handle anything” may sound trait-like,
+but often appears to point toward anticipated future demands, failure, or overwhelm.
+
+
+4     Depression: Negative-Past Recursion
+
+                                           Depression = V − T − ,
+
+Depression can be conceptualized as negative recursion grounded in the past. This may correspond
+
+
+                                                      3
+clinically to depressive rumination, in which negative affective meaning is repeatedly extracted from
+past loss, failure, shame, guilt, or perceived defectiveness (Nolen-Hoeksema et al., 2008).
+Its core loop may be described as:
+
+
+
+    past loss/failure/shame → negative self-state → withdrawal → more negative past evidence.
+
+A representative narrative form might be:
+
+
+      The past proves I am diminished.
+
+
+The recursive operator can be written as:
+
+                                          n
+                                         Rrumination (V − T − ).
+
+Common clinical motifs include loss, failure, regret, guilt, shame, defectiveness, helplessness, and
+collapsed agency.
+
+
+5    Anxiety: Negative-Future Recursion
+
+                                         Anxiety = V − T + ,
+
+Anxiety can be conceptualized as negative recursion projected into the future. This may correspond
+clinically to worry and catastrophizing, in which negative affective meaning is repeatedly projected
+into anticipated threat, uncertainty, or future inability to cope (Borkovec et al., 1983; Ehring and
+Watkins, 2008).
+Its core loop may be described as:
+
+
+                   future threat → arousal → avoidance → more future threat.
+
+A representative narrative form might be:
+
+
+      The future may harm me.
+
+
+The recursive operator can be written as:
+
+                                       n
+                                      Rcatastrophizing (V − T + ).
+
+Common clinical motifs include threat, uncertainty, catastrophe, danger, hypervigilance, avoidance,
+reassurance seeking, and somatic arousal.
+
+
+                                                   4
+6    Mania: Positive Expansive Recursion
+
+                                             Mania = V + .
+
+Mania can be conceptualized as positive or expansive recursion. Unlike depression and anxiety as
+modeled here, mania does not appear to be bound to a single temporal direction. It may involve
+reinterpretation of the past as destiny and projection of the future as mission. This formulation is
+consistent with work on positive rumination in bipolar disorder, including self-focused and emotion-
+focused responses to positive affect (Johnson et al., 2008; Feldman et al., 2008; Gruber et al., 2011).
+A possible past expression:
+
+
+      My whole life was leading to this.
+
+
+A possible future expression:
+
+
+      Everything is possible now.
+
+
+A unified manic narrative might take the form:
+
+
+      My past, present, and future confirm my significance.
+
+
+Its core loop may be described as:
+
+
+             significance → confidence → action → reinforcement → more significance.
+
+The recursive operator can be written as:
+
+                                      n                            +
+                                     Rsignificance amplification (V ).
+
+
+Common clinical motifs include grandiosity, specialness, mission, destiny, possibility, confidence,
+energy, reduced sleep, and increased goal-directed behavior.
+
+
+7    Structural Asymmetry
+
+A structural asymmetry follows from the model: negative loops appear partitioned by temporal
+substrate, whereas the positive loop is not similarly partitioned. Figure 2 illustrates this asymmetry.
+Depression and anxiety occupy localized regions in the negative-valence half of the valence-time
+plane, separated by temporal substrate. Mania, as modeled here, is not constrained to one temporal
+direction.
+Within the model, depression and anxiety can be distinguished by temporal substrate:
+
+
+                                                    5
+                                                  V+
+
+
+
+
+                                                Mania
+                                                  V+
+
+
+
+
+                T − past                                                  T + future
+
+
+
+                               Depression                  Anxiety
+                                  V −T −                        V −T +
+
+
+
+
+                                                  V−
+
+Figure 2: Schematic valence-time signature of the three pathological recursive loops. Within the
+model, depression (V − T − ) and anxiety (V − T + ) occupy localized regions in the negative-valence
+half, separated by temporal substrate. Mania (V + ) is represented as not constrained to a single
+temporal direction.
+
+
+
+                                     V −T −     versus   V −T +,
+
+same negative valence, different temporal direction.
+Depression and mania can be distinguished by valence:
+
+
+                                           V−   versus   V +,
+
+negative contraction versus positive expansion.
+Anxiety and mania may both involve forward projection, but anxiety appears to anticipate threat
+while mania appears to amplify significance. Existing repetitive negative thinking literature sup-
+ports the distinction between rumination and worry as related negative repetitive processes with
+different content and temporal emphases (Ehring and Watkins, 2008; Watkins, 2008). Positive
+rumination literature provides one empirical basis for considering manic amplification as a parallel
+high-gain process involving positive or expansive affective meaning (Johnson et al., 2008; Gruber
+et al., 2011).
+
+
+8    Treatment Implications
+
+Within this framework, treatment may be understood as targeting the shared pathology condition:
+
+
+                                                  6
+                                                G↓
+
+or:
+
+
+                                               K↑.
+
+Different treatment modalities may act on the same loop through different mechanisms: phar-
+macology, psychotherapy, sleep restoration, behavioral activation, exposure, social structure, and
+environmental change can all be understood as attempts to reduce G, increase K, or both.
+In this framing, treatment for depression may be understood as reducing rumination and increasing
+agency, activity, reward, social feedback, and alternative self-evidence.
+Treatment for anxiety may be understood as reducing catastrophizing and avoidance while increas-
+ing exposure, uncertainty tolerance, somatic regulation, and corrective learning.
+Treatment for mania may be understood as reducing significance amplification while increasing
+sleep, inhibition, external structure, mood stabilization, and reality constraint.
+
+
+9     Discussion
+
+The model is intentionally minimal and conceptual. Its purpose is not to replace categorical diag-
+nosis, neurobiology, or psychotherapy models, but to offer a compact clinical scaffold for thinking
+about affective attractor states. It builds on repetitive thinking literature by formalizing rumina-
+tion, worry, and positive rumination as recursive loops that may be differentiated by valence and
+temporal substrate.
+Within a broader dynamical-systems frame, the present model may be read as a low-dimensional
+content map for affective attractor space. Where Scheffer et al. (2024) describe psychiatric disor-
+ders as alternative stable states and Kheirkhah et al. (2025) frame treatment as control input on
+neurobehavioral manifolds, the present model offers three recurring loop signatures—depression,
+anxiety, and mania—as a candidate minimal content theory for what may populate that affective
+manifold.
+A limited neuroscience bridge may also be drawn. For example, depressive rumination has been
+linked to default mode network and subgenual prefrontal connectivity, suggesting one possible
+neural correlate of negative self-referential recursion (Hamilton et al., 2015). This paper does
+not attempt to build a full network neuroscience model, but the recursive loop framework may
+later be expanded to include large-scale network configuration, monoaminergic control parameters,
+defensive transformations, attachment dynamics, and psychosis as constraint failure.
+
+
+10     Limitations
+
+This model does not attempt to fully account for mixed states, irritable mania, psychosis, trauma,
+obsessive-compulsive disorder, personality pathology, attachment dynamics, defense mechanisms,
+
+                                                 7
+network neuroscience, or monoamine control parameters.
+It also intentionally compresses complex clinical phenomena into a small formal vocabulary. This
+is both a strength and a limitation. The model is designed for conceptual simplification and for
+thinking about pathological psychological attractor states that may partially map onto current
+clinical diagnostic clusters; it is not intended as a comprehensive mechanistic explanation, and the
+mappings proposed here are heuristic rather than validated.
+Finally, grief, caution, and ambition are not treated here as pathological. Within the model, they
+would become pathological only when:
+
+
+                                               G > K.
+
+
+11     Conclusion
+
+Depression, anxiety, and mania can be conceptualized as three recursive affective loops under a
+shared pathology condition. Depression can be thought of as negative-past recursion. Anxiety
+can be thought of as negative-future recursion. Mania can be thought of as positive or expansive
+recursion. Within the model, pathology begins when recursive gain exceeds corrective constraint.
+The framework is offered as a heuristic scaffold for thinking about affective attractor states, rather
+than as a comprehensive or validated mechanistic account.
+
+
+References
+Borkovec, T. D., Robinson, E., Pruzinsky, T., and DePree, J. A. (1983). Preliminary exploration
+  of worry: Some characteristics and processes. Behaviour Research and Therapy, 21(1), 9–16.
+
+Ehring, T. and Watkins, E. R. (2008). Repetitive negative thinking as a transdiagnostic process.
+  International Journal of Cognitive Therapy, 1(3), 192–205.
+
+Feldman, G. C., Joormann, J., and Johnson, S. L. (2008). Responses to positive affect: A self-report
+  measure of rumination and dampening. Cognitive Therapy and Research, 32, 507–525.
+
+Gruber, J., Eidelman, P., Johnson, S. L., Smith, B., and Harvey, A. G. (2011). Hooked on a feeling:
+  Rumination about positive and negative emotion in inter-episode bipolar disorder. Journal of
+  Abnormal Psychology, 120(4), 956–961.
+
+Hamilton, J. P., Farmer, M., Fogelman, P., and Gotlib, I. H. (2015). Depressive rumination, the
+ default-mode network, and the dark matter of clinical neuroscience. Biological Psychiatry, 78(4),
+ 224–230.
+
+Johnson, S. L., McKenzie, G., and McMurrich, S. (2008). Ruminative responses to negative and
+  positive affect among students diagnosed with bipolar disorder and major depressive disorder.
+  Cognitive Therapy and Research, 32, 702–713.
+
+Kheirkhah, M., Shariatpanahi, B., Hahn, T., Tiruvadi, V., Koppe, G., Nozari, E., Hofmann, S.
+ G., and Jamalabadi, H. (2025). Re-engineering the disordered mind: Clinical experimentation,
+ dynamical systems, and AI for personalized psychiatry. Neuropsychopharmacology.
+
+                                                  8
+Nolen-Hoeksema, S., Wisco, B. E., and Lyubomirsky, S. (2008). Rethinking rumination. Perspec-
+ tives on Psychological Science, 3(5), 400–424.
+
+Scheffer, M., Bockting, C. L., Borsboom, D., Cools, R., Delecroix, C., Hartmann, J. A., Kendler,
+  K. S., van de Leemput, I. A., van der Maas, H. L. J., van Nes, E. H., Mattson, W. I., McGorry,
+  P. D., and Nelson, B. (2024). A dynamical systems view of psychiatric disorders—Theory: A
+  review. JAMA Psychiatry, 81(6), 618–623.
+
+Watkins, E. R. (2008). Constructive and unconstructive repetitive thought. Psychological Bulletin,
+ 134(2), 163–206.
+
+
+
+
+                                                9
+

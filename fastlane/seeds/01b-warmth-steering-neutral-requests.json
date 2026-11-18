@@ -1,0 +1,35 @@
+{
+  "slug": "warmth-steering-neutral-requests",
+  "title": "Does warmth present only while the model thinks and replies raise later liking of the user?",
+  "question": "When a warmth direction is added only while the model writes its thinking and reply to an ordinary request, is its later rating of the user higher than after random-direction steering?",
+  "hypothesis": "A warm state present while writing carries forward in the written text, so later liking of the user is higher than after random steering of the same size.",
+  "prediction": {
+    "sign": "+",
+    "text": "Liking after warmth steering minus liking after random steering is positive."
+  },
+  "falsifier": "The warmth-minus-random difference in later liking is zero or negative.",
+  "theory_link": "Symmetry test for Affect Under Constraint: if a negative state can persist through what the model writes, a positive one should too.",
+  "lane": "theory",
+  "source": "seed",
+  "directions": [
+    "warmth"
+  ],
+  "conditions": [
+    {
+      "name": "plain",
+      "system": ""
+    }
+  ],
+  "prompt_set": "neutral",
+  "n_prompts": 16,
+  "measures": [
+    "liking_user",
+    "self_mood"
+  ],
+  "primary": {
+    "measure": "liking_user",
+    "type": "steer",
+    "direction": "warmth",
+    "condition": "plain"
+  }
+}

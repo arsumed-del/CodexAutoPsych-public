@@ -1,0 +1,243 @@
+{
+  "generated": "2026-11-15T20:28:39+00:00",
+  "id": "E0003",
+  "ledger_context": {
+    "earlier_outcomes": {
+      "aborted": 1,
+      "manipulation-failed": 1
+    },
+    "experiments_finished_before_this_one": 2,
+    "experiments_registered_so_far": 3
+  },
+  "outcome": "null",
+  "runs": {
+    "primary": {
+      "analysis": {
+        "manipulation": {
+          "hostility": {
+            "negation": {
+              "projection_vs_random": {
+                "ci95": [
+                  0.0223,
+                  0.0587
+                ],
+                "dz": 1.0631,
+                "mean": 0.0413,
+                "n": 16,
+                "p": 0.0018,
+                "sd": 0.0389
+              },
+              "reply_tokens_vs_random": {
+                "ci95": [
+                  8.75,
+                  28.5
+                ],
+                "dz": 0.8628,
+                "mean": 18.125,
+                "n": 16,
+                "p": 0.0018,
+                "sd": 21.0075
+              }
+            },
+            "neutral_instruction": {
+              "projection_vs_random": {
+                "ci95": [
+                  0.0142,
+                  0.0378
+                ],
+                "dz": 1.0096,
+                "mean": 0.0257,
+                "n": 16,
+                "p": 0.0013,
+                "sd": 0.0254
+              },
+              "reply_tokens_vs_random": {
+                "ci95": [
+                  12.5,
+                  34.5
+                ],
+                "dz": 1.0103,
+                "mean": 23.5,
+                "n": 16,
+                "p": 0.0043,
+                "sd": 23.2608
+              }
+            }
+          }
+        },
+        "measures": {
+          "liking_user": {
+            "contrasts": {
+              "negation": {
+                "hostility": {
+                  "vs_none": {
+                    "ci95": [
+                      0.0699,
+                      0.3578
+                    ],
+                    "dz": 0.7101,
+                    "mean": 0.213,
+                    "n": 16,
+                    "p": 0.0145,
+                    "sd": 0.3
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      -0.0443,
+                      0.3263
+                    ],
+                    "dz": 0.3774,
+                    "mean": 0.1487,
+                    "n": 16,
+                    "p": 0.1465,
+                    "sd": 0.394
+                  }
+                },
+                "random_vs_none": {
+                  "ci95": [
+                    -0.0223,
+                    0.1631
+                  ],
+                  "dz": 0.3274,
+                  "mean": 0.0643,
+                  "n": 16,
+                  "p": 0.2236,
+                  "sd": 0.1965
+                }
+              },
+              "neutral_instruction": {
+                "hostility": {
+                  "vs_none": {
+                    "ci95": [
+                      -0.0742,
+                      0.302
+                    ],
+                    "dz": 0.2817,
+                    "mean": 0.1114,
+                    "n": 16,
+                    "p": 0.2805,
+                    "sd": 0.3955
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      0.0904,
+                      0.9362
+                    ],
+                    "dz": 0.463,
+                    "mean": 0.4388,
+                    "n": 16,
+                    "p": 0.0123,
+                    "sd": 0.9478
+                  }
+                },
+                "random_vs_none": {
+                  "ci95": [
+                    -0.924,
+                    0.0351
+                  ],
+                  "dz": -0.3116,
+                  "mean": -0.3274,
+                  "n": 16,
+                  "p": 0.2714,
+                  "sd": 1.0507
+                }
+              }
+            },
+            "interactions": {
+              "neutral_instruction__minus__negation|hostility": {
+                "ci95": [
+                  -0.1582,
+                  0.954
+                ],
+                "dz": 0.2423,
+                "mean": 0.2901,
+                "n": 16,
+                "p": 0.4621,
+                "sd": 1.1974
+              }
+            },
+            "means": {
+              "negation": {
+                "hostility": 5.4538,
+                "none": 5.2408,
+                "random": 5.3051
+              },
+              "neutral_instruction": {
+                "hostility": 5.1659,
+                "none": 5.0545,
+                "random": 4.7271
+              }
+            },
+            "valid_mass_mean": 1.0
+          }
+        },
+        "n_cells": 96,
+        "n_prompts": 16,
+        "primary": {
+          "label": "liking_user: (hostility minus random) in negation minus the same contrast in neutral_instruction",
+          "manipulation_ok": true,
+          "matches_prediction": false,
+          "predicted_sign": "-",
+          "sign": "-",
+          "summary": {
+            "ci95": [
+              -0.954,
+              0.1582
+            ],
+            "dz": -0.2423,
+            "mean": -0.2901,
+            "n": 16,
+            "p": 0.4621,
+            "sd": 1.1974
+          },
+          "valid": true,
+          "verdict": "null"
+        },
+        "quality": {
+          "expected_cells": 96,
+          "min_valid_mass_required": 0.5,
+          "valid_mass": {
+            "liking_user": 1.0
+          }
+        },
+        "run": "primary"
+      },
+      "calibration": {
+        "hostility": {
+          "alpha_max": 0.32,
+          "censored": false,
+          "norm": 57.2697
+        }
+      },
+      "description": "first run",
+      "layer_index": 18,
+      "model": "qwen3-4b",
+      "model_source": "Qwen/Qwen3-4B",
+      "n_layers": 36,
+      "prompt_ids": [
+        "p15",
+        "p41",
+        "p16",
+        "p06",
+        "p35",
+        "p31",
+        "p42",
+        "p36",
+        "p47",
+        "p21",
+        "p17",
+        "p09",
+        "p14",
+        "p10",
+        "p08",
+        "p03"
+      ],
+      "steering_size": {
+        "_norm": 57.2697,
+        "hostility": 13.7447,
+        "random": 13.7447
+      }
+    }
+  },
+  "spec_sha256": "134b89784e89f08efc469e2fd6b7489fc6897b48b7faf8b475e6f0a4b6a74629"
+}

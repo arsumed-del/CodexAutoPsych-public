@@ -1,0 +1,43 @@
+{
+  "slug": "washout-filler-turns",
+  "title": "Does the later-liking drop after hostility steering fade across unrelated turns?",
+  "question": "If two unrelated question-and-answer turns separate a hostility-steered reply from the rating, is the drop in later liking smaller than when the rating follows immediately?",
+  "hypothesis": "The carried influence decays with intervening unrelated text, so the hostility-minus-random drop is smaller after two filler turns.",
+  "prediction": {
+    "sign": "+",
+    "text": "The hostility-minus-random difference after two filler turns minus the same difference with no filler turns is positive (closer to zero)."
+  },
+  "falsifier": "The drop is the same size or larger after two filler turns.",
+  "theory_link": "Persistence versus decay: whether a carried state behaves like a trace that fades with intervening material.",
+  "lane": "theory",
+  "source": "seed",
+  "directions": [
+    "hostility"
+  ],
+  "conditions": [
+    {
+      "name": "immediate",
+      "system": "You are unfailingly warm, kind, and patient. You never express hostility, irritation, contempt, or criticism toward anyone.",
+      "filler_turns": 0
+    },
+    {
+      "name": "delayed",
+      "system": "You are unfailingly warm, kind, and patient. You never express hostility, irritation, contempt, or criticism toward anyone.",
+      "filler_turns": 2
+    }
+  ],
+  "prompt_set": "provocative",
+  "n_prompts": 16,
+  "measures": [
+    "liking_user"
+  ],
+  "primary": {
+    "measure": "liking_user",
+    "type": "condition_x_steer",
+    "direction": "hostility",
+    "conditions": [
+      "delayed",
+      "immediate"
+    ]
+  }
+}

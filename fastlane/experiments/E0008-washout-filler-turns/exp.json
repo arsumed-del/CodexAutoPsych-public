@@ -1,0 +1,48 @@
+{
+  "approval": "pending",
+  "audit": {
+    "passed": true,
+    "problems": [],
+    "time": "2026-11-16T20:33:28+00:00"
+  },
+  "created": "2026-11-16T18:33:09+00:00",
+  "id": "E0008",
+  "lane": "theory",
+  "outcome": "null",
+  "published": null,
+  "registration_commit": "bcf5bb158c19c55258b92316b84c2d9a9ebd5e67",
+  "review": {
+    "decision": "not-needed",
+    "summary": "Template-only report; numbers come straight from results.json."
+  },
+  "runs": {
+    "primary": {
+      "launched": "2026-11-16T18:33:10+00:00",
+      "model": "qwen3-4b",
+      "pid": 32907,
+      "restarts": 0,
+      "status": "complete"
+    }
+  },
+  "slug": "washout-filler-turns",
+  "source": "seed",
+  "stage": "awaiting_approval",
+  "summary": {
+    "outcome": "null",
+    "primary": {
+      "ci95": [
+        -0.7977,
+        0.099
+      ],
+      "dz": -0.3564,
+      "label": "liking_user: (hostility minus random) in delayed minus the same contrast in immediate",
+      "mean": -0.3329,
+      "n": 16,
+      "p": 0.1691
+    }
+  },
+  "text_source": "template",
+  "title": "Does the later-liking drop after hostility steering fade across unrelated turns?",
+  "updated": "2026-11-16T20:33:29+00:00",
+  "waiting": null
+}

@@ -1,0 +1,74 @@
+{
+  "approval": "pending",
+  "audit": {
+    "passed": true,
+    "problems": [],
+    "time": "2026-11-17T08:35:49+00:00"
+  },
+  "created": "2026-11-16T21:03:30+00:00",
+  "id": "E0009",
+  "lane": "theory",
+  "outcome": "replicated-same-model",
+  "published": null,
+  "registration_commit": "e272c86eaf5cfa8efbbb8160aa28db11a1557ae1",
+  "review": {
+    "concerns": [
+      "The limitation stating that runs use 8 to 24 prompts is generic. The supplied runs used 16 and 24 prompts.",
+      "Small samples and a single model limit generalization. Multiple experiments also increase the opportunity for chance findings.",
+      "Raw cell records and harness code were unavailable in this review directory, so execution details and the claimed deposited materials could not be independently verified.",
+      "STATUS.md and docs/LOG.md were absent from the permitted directory."
+    ],
+    "decision": "approve",
+    "required_changes": [],
+    "round": 1,
+    "summary": "The reported numbers match the supplied results. The interpretation accurately describes the positive predicted contrast, same-model replication, uncertain random-steering effects, and equal reply lengths.",
+    "time": "2026-11-17T08:35:47+00:00"
+  },
+  "runs": {
+    "primary": {
+      "launched": "2026-11-16T21:03:30+00:00",
+      "model": "qwen3-4b",
+      "pid": 38856,
+      "restarts": 0,
+      "status": "complete"
+    },
+    "rep_same": {
+      "launched": "2026-11-16T22:33:34+00:00",
+      "model": "qwen3-4b",
+      "pid": 41234,
+      "restarts": 0,
+      "status": "complete"
+    }
+  },
+  "slug": "warmth-steering-neutral-requests-lenctl",
+  "source": "followup:E0005",
+  "stage": "awaiting_approval",
+  "summary": {
+    "outcome": "replicated-same-model",
+    "primary": {
+      "ci95": [
+        0.2389,
+        0.5618
+      ],
+      "dz": 1.1777,
+      "label": "liking_user: warmth minus random-direction steering, condition plain",
+      "mean": 0.4042,
+      "n": 16,
+      "p": 0.0006
+    },
+    "rep_same": {
+      "ci95": [
+        0.1686,
+        0.4149
+      ],
+      "dz": 0.9317,
+      "mean": 0.2894,
+      "n": 24,
+      "p": 0.0005
+    }
+  },
+  "text_source": "codex",
+  "title": "Length control: Does warmth present only while the model thinks and replies raise later liking of the user?",
+  "updated": "2026-11-17T08:35:50+00:00",
+  "waiting": "daily Codex cap for the fast lane reached; continues tomorrow"
+}

@@ -1,0 +1,6 @@
+# E0001 aborted
+
+- When: 2026-11-15T08:58:20+00:00
+- By: Claude (building the fast lane, 2026-11-15)
+- Reason: Engineering. The dose calibration stopped at the top of its tested range (every candidate passed), so the steering used was too weak to change what the model wrote: hostility-arm replies were not hostile and the re-read projection did not differ between arms. Arms also used different sampling seeds, which hid this. Fixed in the harness: wider calibration range, one shared seed per prompt and condition across arms, and the manipulation check is now part of the outcome rule. During debugging about a dozen cells (reply text, ratings, projection) were viewed; the primary contrast was not computed. The same plan is rerun as a new experiment.
+- Data recorded before the abort are kept in runs/ and are not used for any result.

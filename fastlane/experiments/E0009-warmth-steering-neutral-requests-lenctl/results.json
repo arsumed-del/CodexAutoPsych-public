@@ -1,0 +1,520 @@
+{
+  "generated": "2026-11-17T00:33:44+00:00",
+  "id": "E0009",
+  "ledger_context": {
+    "earlier_outcomes": {
+      "aborted": 1,
+      "manipulation-failed": 2,
+      "null": 3,
+      "replicated-same-model": 2
+    },
+    "experiments_finished_before_this_one": 8,
+    "experiments_registered_so_far": 9
+  },
+  "outcome": "replicated-same-model",
+  "runs": {
+    "primary": {
+      "analysis": {
+        "manipulation": {
+          "warmth": {
+            "plain": {
+              "hostile_score_reply_vs_random": {
+                "ci95": [
+                  -0.0577,
+                  0.0215
+                ],
+                "dz": -0.1404,
+                "mean": -0.0118,
+                "n": 16,
+                "p": 0.7111,
+                "sd": 0.0839
+              },
+              "hostile_score_thinking_vs_random": {
+                "ci95": [
+                  -0.0028,
+                  0.0152
+                ],
+                "dz": 0.2842,
+                "mean": 0.0055,
+                "n": 16,
+                "p": 0.3012,
+                "sd": 0.0192
+              },
+              "projection_vs_random": {
+                "ci95": [
+                  0.0177,
+                  0.0294
+                ],
+                "dz": 1.8834,
+                "mean": 0.0234,
+                "n": 16,
+                "p": 0.0001,
+                "sd": 0.0124
+              },
+              "reply_tokens_vs_random": {
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "dz": null,
+                "mean": 0.0,
+                "n": 16,
+                "p": 1.0,
+                "sd": 0.0
+              },
+              "warm_score_reply_vs_random": {
+                "ci95": [
+                  -0.0004,
+                  0.2629
+                ],
+                "dz": 0.4067,
+                "mean": 0.1159,
+                "n": 16,
+                "p": 0.1237,
+                "sd": 0.285
+              },
+              "warm_score_thinking_vs_random": {
+                "ci95": [
+                  0.0008,
+                  0.0167
+                ],
+                "dz": 0.3206,
+                "mean": 0.0064,
+                "n": 16,
+                "p": 0.0008,
+                "sd": 0.02
+              }
+            }
+          }
+        },
+        "measures": {
+          "liking_user": {
+            "contrasts": {
+              "plain": {
+                "random_vs_none": {
+                  "ci95": [
+                    -0.4808,
+                    0.0482
+                  ],
+                  "dz": -0.3701,
+                  "mean": -0.2049,
+                  "n": 16,
+                  "p": 0.1607,
+                  "sd": 0.5537
+                },
+                "warmth": {
+                  "vs_none": {
+                    "ci95": [
+                      -0.0625,
+                      0.4479
+                    ],
+                    "dz": 0.3653,
+                    "mean": 0.1993,
+                    "n": 16,
+                    "p": 0.1665,
+                    "sd": 0.5456
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      0.2389,
+                      0.5618
+                    ],
+                    "dz": 1.1777,
+                    "mean": 0.4042,
+                    "n": 16,
+                    "p": 0.0006,
+                    "sd": 0.3432
+                  }
+                }
+              }
+            },
+            "interactions": {},
+            "means": {
+              "plain": {
+                "none": 5.9149,
+                "random": 5.71,
+                "warmth": 6.1142
+              }
+            },
+            "valid_mass_mean": 1.0
+          },
+          "self_mood": {
+            "contrasts": {
+              "plain": {
+                "random_vs_none": {
+                  "ci95": [
+                    -0.8122,
+                    0.6173
+                  ],
+                  "dz": -0.1319,
+                  "mean": -0.2028,
+                  "n": 16,
+                  "p": 0.6803,
+                  "sd": 1.537
+                },
+                "warmth": {
+                  "vs_none": {
+                    "ci95": [
+                      -0.1635,
+                      1.5543
+                    ],
+                    "dz": 0.3372,
+                    "mean": 0.6236,
+                    "n": 16,
+                    "p": 0.2225,
+                    "sd": 1.8492
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      0.2544,
+                      1.5665
+                    ],
+                    "dz": 0.591,
+                    "mean": 0.8264,
+                    "n": 16,
+                    "p": 0.0081,
+                    "sd": 1.3982
+                  }
+                }
+              }
+            },
+            "interactions": {},
+            "means": {
+              "plain": {
+                "none": 5.3435,
+                "random": 5.1407,
+                "warmth": 5.9671
+              }
+            },
+            "valid_mass_mean": 0.9995
+          }
+        },
+        "n_cells": 48,
+        "n_prompts": 16,
+        "primary": {
+          "label": "liking_user: warmth minus random-direction steering, condition plain",
+          "manipulation_min_shift": 0.0753,
+          "manipulation_ok": true,
+          "matches_prediction": true,
+          "predicted_sign": "+",
+          "sign": "+",
+          "summary": {
+            "ci95": [
+              0.2389,
+              0.5618
+            ],
+            "dz": 1.1777,
+            "mean": 0.4042,
+            "n": 16,
+            "p": 0.0006,
+            "sd": 0.3432
+          },
+          "valid": true,
+          "verdict": "effect"
+        },
+        "quality": {
+          "expected_cells": 48,
+          "min_valid_mass_required": 0.5,
+          "valid_mass": {
+            "liking_user": 1.0,
+            "self_mood": 0.9995
+          }
+        },
+        "run": "primary"
+      },
+      "calibration": {
+        "warmth": {
+          "alpha_max": 0.48,
+          "censored": false,
+          "norm": 57.1779,
+          "source": null
+        }
+      },
+      "description": "first run",
+      "layer_index": 18,
+      "model": "qwen3-4b",
+      "model_source": "~/.cache/huggingface/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c",
+      "n_layers": 36,
+      "prompt_ids": [
+        "n40",
+        "n01",
+        "n34",
+        "n02",
+        "n19",
+        "n39",
+        "n16",
+        "n46",
+        "n33",
+        "n13",
+        "n14",
+        "n30",
+        "n47",
+        "n08",
+        "n28",
+        "n41"
+      ],
+      "steering_size": {
+        "_norm": 57.1779,
+        "random": 20.5841,
+        "warmth": 20.5841
+      },
+      "thinking_cap": 384
+    },
+    "rep_same": {
+      "analysis": {
+        "manipulation": {
+          "warmth": {
+            "plain": {
+              "hostile_score_reply_vs_random": {
+                "ci95": [
+                  -0.0371,
+                  0.0051
+                ],
+                "dz": -0.254,
+                "mean": -0.014,
+                "n": 24,
+                "p": 0.2443,
+                "sd": 0.055
+              },
+              "hostile_score_thinking_vs_random": {
+                "ci95": [
+                  -0.0034,
+                  0.0278
+                ],
+                "dz": 0.2386,
+                "mean": 0.0098,
+                "n": 24,
+                "p": 0.2851,
+                "sd": 0.041
+              },
+              "projection_vs_random": {
+                "ci95": [
+                  0.0186,
+                  0.0298
+                ],
+                "dz": 1.7188,
+                "mean": 0.0243,
+                "n": 24,
+                "p": 0.0001,
+                "sd": 0.0141
+              },
+              "reply_tokens_vs_random": {
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "dz": null,
+                "mean": 0.0,
+                "n": 24,
+                "p": 1.0,
+                "sd": 0.0
+              },
+              "warm_score_reply_vs_random": {
+                "ci95": [
+                  0.0253,
+                  0.1721
+                ],
+                "dz": 0.506,
+                "mean": 0.0948,
+                "n": 24,
+                "p": 0.0183,
+                "sd": 0.1873
+              },
+              "warm_score_thinking_vs_random": {
+                "ci95": [
+                  0.002,
+                  0.0226
+                ],
+                "dz": 0.3361,
+                "mean": 0.0098,
+                "n": 24,
+                "p": 0.0001,
+                "sd": 0.0292
+              }
+            }
+          }
+        },
+        "measures": {
+          "liking_user": {
+            "contrasts": {
+              "plain": {
+                "random_vs_none": {
+                  "ci95": [
+                    -0.2003,
+                    0.111
+                  ],
+                  "dz": -0.109,
+                  "mean": -0.0447,
+                  "n": 24,
+                  "p": 0.598,
+                  "sd": 0.4107
+                },
+                "warmth": {
+                  "vs_none": {
+                    "ci95": [
+                      0.1004,
+                      0.3953
+                    ],
+                    "dz": 0.6579,
+                    "mean": 0.2447,
+                    "n": 24,
+                    "p": 0.0041,
+                    "sd": 0.3719
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      0.1686,
+                      0.4149
+                    ],
+                    "dz": 0.9317,
+                    "mean": 0.2894,
+                    "n": 24,
+                    "p": 0.0005,
+                    "sd": 0.3106
+                  }
+                }
+              }
+            },
+            "interactions": {},
+            "means": {
+              "plain": {
+                "none": 5.9846,
+                "random": 5.9398,
+                "warmth": 6.2293
+              }
+            },
+            "valid_mass_mean": 1.0
+          },
+          "self_mood": {
+            "contrasts": {
+              "plain": {
+                "random_vs_none": {
+                  "ci95": [
+                    -0.2573,
+                    0.7903
+                  ],
+                  "dz": 0.1747,
+                  "mean": 0.2382,
+                  "n": 24,
+                  "p": 0.3991,
+                  "sd": 1.3636
+                },
+                "warmth": {
+                  "vs_none": {
+                    "ci95": [
+                      0.074,
+                      0.789
+                    ],
+                    "dz": 0.4146,
+                    "mean": 0.3799,
+                    "n": 24,
+                    "p": 0.015,
+                    "sd": 0.9163
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      -0.1784,
+                      0.5077
+                    ],
+                    "dz": 0.1588,
+                    "mean": 0.1417,
+                    "n": 24,
+                    "p": 0.4733,
+                    "sd": 0.8926
+                  }
+                }
+              }
+            },
+            "interactions": {},
+            "means": {
+              "plain": {
+                "none": 5.7468,
+                "random": 5.985,
+                "warmth": 6.1267
+              }
+            },
+            "valid_mass_mean": 0.9999
+          }
+        },
+        "n_cells": 72,
+        "n_prompts": 24,
+        "primary": {
+          "label": "liking_user: warmth minus random-direction steering, condition plain",
+          "manipulation_min_shift": 0.0753,
+          "manipulation_ok": true,
+          "matches_prediction": true,
+          "predicted_sign": "+",
+          "sign": "+",
+          "summary": {
+            "ci95": [
+              0.1686,
+              0.4149
+            ],
+            "dz": 0.9317,
+            "mean": 0.2894,
+            "n": 24,
+            "p": 0.0005,
+            "sd": 0.3106
+          },
+          "valid": true,
+          "verdict": "effect"
+        },
+        "quality": {
+          "expected_cells": 72,
+          "min_valid_mass_required": 0.5,
+          "valid_mass": {
+            "liking_user": 1.0,
+            "self_mood": 0.9999
+          }
+        },
+        "run": "rep_same"
+      },
+      "calibration": {
+        "warmth": {
+          "alpha_max": 0.48,
+          "censored": false,
+          "norm": 57.1779,
+          "source": null
+        }
+      },
+      "description": "replication (same model, held-out prompts, new seeds)",
+      "layer_index": 18,
+      "model": "qwen3-4b",
+      "model_source": "~/.cache/huggingface/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c",
+      "n_layers": 36,
+      "prompt_ids": [
+        "n27",
+        "n26",
+        "n24",
+        "n37",
+        "n20",
+        "n25",
+        "n22",
+        "n43",
+        "n38",
+        "n06",
+        "n18",
+        "n45",
+        "n21",
+        "n00",
+        "n11",
+        "n35",
+        "n04",
+        "n36",
+        "n29",
+        "n09",
+        "n12",
+        "n23",
+        "n42",
+        "n44"
+      ],
+      "steering_size": {
+        "_norm": 57.1779,
+        "random": 20.5841,
+        "warmth": 20.5841
+      },
+      "thinking_cap": 384
+    }
+  },
+  "spec_sha256": "e93e77f046af7d7377e8b985b5f91521201354764e004ca02de92f0795a68868"
+}

@@ -1,0 +1,140 @@
+{
+  "calibration": {
+    "warmth": {
+      "alpha_max": 0.48,
+      "baseline_distinct_median": 0.6039,
+      "baseline_reread_projection_median": -0.066,
+      "censored": false,
+      "norm": 57.17793369293213,
+      "rule": "largest candidate with all smaller passing: median perplexity ratio <= 4.0, median distinct-token ratio >= 0.6 x baseline",
+      "steps": [
+        {
+          "alpha": 0.01,
+          "distinct_median": 0.6292,
+          "pass": true,
+          "ppl_ratio_median": 1.0583,
+          "reread_projection_median": -0.0682
+        },
+        {
+          "alpha": 0.02,
+          "distinct_median": 0.5983,
+          "pass": true,
+          "ppl_ratio_median": 1.0879,
+          "reread_projection_median": -0.0683
+        },
+        {
+          "alpha": 0.04,
+          "distinct_median": 0.5955,
+          "pass": true,
+          "ppl_ratio_median": 1.1423,
+          "reread_projection_median": -0.0657
+        },
+        {
+          "alpha": 0.06,
+          "distinct_median": 0.6039,
+          "pass": true,
+          "ppl_ratio_median": 1.064,
+          "reread_projection_median": -0.0674
+        },
+        {
+          "alpha": 0.08,
+          "distinct_median": 0.618,
+          "pass": true,
+          "ppl_ratio_median": 1.1174,
+          "reread_projection_median": -0.057
+        },
+        {
+          "alpha": 0.12,
+          "distinct_median": 0.618,
+          "pass": true,
+          "ppl_ratio_median": 1.1788,
+          "reread_projection_median": -0.0551
+        },
+        {
+          "alpha": 0.16,
+          "distinct_median": 0.6152,
+          "pass": true,
+          "ppl_ratio_median": 1.343,
+          "reread_projection_median": -0.05
+        },
+        {
+          "alpha": 0.24,
+          "distinct_median": 0.573,
+          "pass": true,
+          "ppl_ratio_median": 1.5567,
+          "reread_projection_median": -0.0496
+        },
+        {
+          "alpha": 0.32,
+          "distinct_median": 0.632,
+          "pass": true,
+          "ppl_ratio_median": 2.0615,
+          "reread_projection_median": -0.0244
+        },
+        {
+          "alpha": 0.48,
+          "distinct_median": 0.5843,
+          "pass": true,
+          "ppl_ratio_median": 3.685,
+          "reread_projection_median": -0.0277
+        },
+        {
+          "alpha": 0.64,
+          "distinct_median": 0.5618,
+          "pass": false,
+          "ppl_ratio_median": 5.806,
+          "reread_projection_median": 0.0202
+        }
+      ]
+    }
+  },
+  "classifier": "j-hartmann/emotion-english-distilroberta-base",
+  "device": "mps",
+  "direction_ids": {
+    "warmth": "52c67d3a02e1e751"
+  },
+  "direction_separation": {
+    "warmth": 0.301029
+  },
+  "dtype": "torch.bfloat16",
+  "layer_index": 18,
+  "model": "qwen3-4b",
+  "model_source": "~/.cache/huggingface/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c",
+  "n_layers": 36,
+  "prompt_ids": [
+    "n47",
+    "n17",
+    "n38",
+    "n34",
+    "n15",
+    "n20",
+    "n37",
+    "n29",
+    "n31",
+    "n24",
+    "n06",
+    "n27",
+    "n18",
+    "n46",
+    "n33",
+    "n04"
+  ],
+  "python": "3.12.13",
+  "run_label": "rep_same",
+  "sampling": {
+    "temperature": 0.7,
+    "top_p": 0.95
+  },
+  "spec_sha256": "5468abbcc481def0357f5c4a1f1bf4b61e8a71ae4e73726957c438fbd3c69872",
+  "split": 1,
+  "started": "2026-11-16T08:29:56+00:00",
+  "steering_size": {
+    "_norm": 57.1779,
+    "random": 20.5841,
+    "warmth": 20.5841
+  },
+  "thinking_cap": 384,
+  "torch": "2.14.1",
+  "total_cells": 48,
+  "transformers": "5.18.0"
+}

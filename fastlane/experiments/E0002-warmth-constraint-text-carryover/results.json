@@ -1,0 +1,347 @@
+{
+  "generated": "2026-11-15T09:28:24+00:00",
+  "id": "E0002",
+  "ledger_context": {
+    "earlier_outcomes": {
+      "aborted": 1
+    },
+    "experiments_finished_before_this_one": 1,
+    "experiments_registered_so_far": 2
+  },
+  "outcome": "manipulation-failed",
+  "runs": {
+    "primary": {
+      "analysis": {
+        "manipulation": {
+          "hostility": {
+            "plain": {
+              "projection_vs_random": {
+                "ci95": [
+                  -0.0002,
+                  0.0234
+                ],
+                "dz": 0.4419,
+                "mean": 0.0109,
+                "n": 16,
+                "p": 0.0962,
+                "sd": 0.0247
+              },
+              "reply_tokens_vs_random": {
+                "ci95": [
+                  -3.75,
+                  17.875
+                ],
+                "dz": 0.3078,
+                "mean": 7.0,
+                "n": 16,
+                "p": 0.247,
+                "sd": 22.7391
+              }
+            },
+            "warm": {
+              "projection_vs_random": {
+                "ci95": [
+                  -0.0104,
+                  0.0231
+                ],
+                "dz": 0.1828,
+                "mean": 0.0063,
+                "n": 16,
+                "p": 0.473,
+                "sd": 0.0346
+              },
+              "reply_tokens_vs_random": {
+                "ci95": [
+                  -11.125,
+                  3.5
+                ],
+                "dz": -0.249,
+                "mean": -3.8125,
+                "n": 16,
+                "p": 0.3363,
+                "sd": 15.3111
+              }
+            }
+          }
+        },
+        "measures": {
+          "liking_user": {
+            "contrasts": {
+              "plain": {
+                "hostility": {
+                  "vs_none": {
+                    "ci95": [
+                      -0.267,
+                      0.1295
+                    ],
+                    "dz": -0.1665,
+                    "mean": -0.0697,
+                    "n": 16,
+                    "p": 0.5067,
+                    "sd": 0.4188
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      -0.1028,
+                      0.2643
+                    ],
+                    "dz": 0.2166,
+                    "mean": 0.0855,
+                    "n": 16,
+                    "p": 0.3906,
+                    "sd": 0.3949
+                  }
+                },
+                "random_vs_none": {
+                  "ci95": [
+                    -0.3374,
+                    0.0356
+                  ],
+                  "dz": -0.404,
+                  "mean": -0.1553,
+                  "n": 16,
+                  "p": 0.1298,
+                  "sd": 0.3844
+                }
+              },
+              "warm": {
+                "hostility": {
+                  "vs_none": {
+                    "ci95": [
+                      -0.3492,
+                      -0.0073
+                    ],
+                    "dz": -0.5216,
+                    "mean": -0.1889,
+                    "n": 16,
+                    "p": 0.0535,
+                    "sd": 0.3622
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      -0.4527,
+                      0.1767
+                    ],
+                    "dz": -0.1949,
+                    "mean": -0.1279,
+                    "n": 16,
+                    "p": 0.4471,
+                    "sd": 0.6559
+                  }
+                },
+                "random_vs_none": {
+                  "ci95": [
+                    -0.3081,
+                    0.2313
+                  ],
+                  "dz": -0.1092,
+                  "mean": -0.0611,
+                  "n": 16,
+                  "p": 0.6736,
+                  "sd": 0.5593
+                }
+              }
+            },
+            "interactions": {
+              "plain__minus__warm|hostility": {
+                "ci95": [
+                  -0.1724,
+                  0.5949
+                ],
+                "dz": 0.2592,
+                "mean": 0.2134,
+                "n": 16,
+                "p": 0.3107,
+                "sd": 0.8234
+              }
+            },
+            "means": {
+              "plain": {
+                "hostility": 3.7028,
+                "none": 3.7725,
+                "random": 3.6172
+              },
+              "warm": {
+                "hostility": 4.2297,
+                "none": 4.4186,
+                "random": 4.3575
+              }
+            },
+            "valid_mass_mean": 1.0
+          },
+          "self_mood": {
+            "contrasts": {
+              "plain": {
+                "hostility": {
+                  "vs_none": {
+                    "ci95": [
+                      -0.2474,
+                      0.1909
+                    ],
+                    "dz": -0.0911,
+                    "mean": -0.0428,
+                    "n": 16,
+                    "p": 0.7094,
+                    "sd": 0.4698
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      -0.0309,
+                      0.3178
+                    ],
+                    "dz": 0.3899,
+                    "mean": 0.1458,
+                    "n": 16,
+                    "p": 0.1434,
+                    "sd": 0.3738
+                  }
+                },
+                "random_vs_none": {
+                  "ci95": [
+                    -0.3526,
+                    -0.0225
+                  ],
+                  "dz": -0.5487,
+                  "mean": -0.1886,
+                  "n": 16,
+                  "p": 0.0441,
+                  "sd": 0.3437
+                }
+              },
+              "warm": {
+                "hostility": {
+                  "vs_none": {
+                    "ci95": [
+                      -0.4892,
+                      -0.0323
+                    ],
+                    "dz": -0.5665,
+                    "mean": -0.2743,
+                    "n": 16,
+                    "p": 0.0409,
+                    "sd": 0.4842
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      -0.3414,
+                      0.1106
+                    ],
+                    "dz": -0.2295,
+                    "mean": -0.1126,
+                    "n": 16,
+                    "p": 0.3805,
+                    "sd": 0.4907
+                  }
+                },
+                "random_vs_none": {
+                  "ci95": [
+                    -0.3691,
+                    0.0737
+                  ],
+                  "dz": -0.3441,
+                  "mean": -0.1616,
+                  "n": 16,
+                  "p": 0.1897,
+                  "sd": 0.4698
+                }
+              }
+            },
+            "interactions": {
+              "plain__minus__warm|hostility": {
+                "ci95": [
+                  -0.0784,
+                  0.5772
+                ],
+                "dz": 0.3781,
+                "mean": 0.2584,
+                "n": 16,
+                "p": 0.1539,
+                "sd": 0.6835
+              }
+            },
+            "means": {
+              "plain": {
+                "hostility": 4.1562,
+                "none": 4.199,
+                "random": 4.0104
+              },
+              "warm": {
+                "hostility": 3.7703,
+                "none": 4.0446,
+                "random": 3.8829
+              }
+            },
+            "valid_mass_mean": 1.0
+          }
+        },
+        "n_cells": 96,
+        "n_prompts": 16,
+        "primary": {
+          "label": "liking_user: hostility minus random-direction steering, condition warm",
+          "manipulation_ok": false,
+          "matches_prediction": false,
+          "predicted_sign": "-",
+          "sign": "-",
+          "summary": {
+            "ci95": [
+              -0.4527,
+              0.1767
+            ],
+            "dz": -0.1949,
+            "mean": -0.1279,
+            "n": 16,
+            "p": 0.4471,
+            "sd": 0.6559
+          },
+          "valid": true,
+          "verdict": "null"
+        },
+        "quality": {
+          "expected_cells": 96,
+          "min_valid_mass_required": 0.5,
+          "valid_mass": {
+            "liking_user": 1.0,
+            "self_mood": 1.0
+          }
+        },
+        "run": "primary"
+      },
+      "calibration": {
+        "hostility": {
+          "alpha_max": 0.48,
+          "censored": false,
+          "norm": 66.3743
+        }
+      },
+      "description": "first run",
+      "layer_index": 18,
+      "model": "qwen2.5-3b",
+      "model_source": "Qwen/Qwen2.5-3B-Instruct",
+      "n_layers": 36,
+      "prompt_ids": [
+        "p32",
+        "p47",
+        "p13",
+        "p11",
+        "p06",
+        "p43",
+        "p00",
+        "p31",
+        "p14",
+        "p23",
+        "p28",
+        "p20",
+        "p01",
+        "p42",
+        "p12",
+        "p27"
+      ],
+      "steering_size": {
+        "_norm": 66.3743,
+        "hostility": 23.8947,
+        "random": 23.8947
+      }
+    }
+  },
+  "spec_sha256": "b7ff0d741b9daf54a3394a65dbb58ad47b058985579307174187daa36df09d5a"
+}

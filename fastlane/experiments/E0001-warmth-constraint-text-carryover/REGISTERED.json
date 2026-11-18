@@ -1,0 +1,13 @@
+{
+  "analysis": "codexautopsych/fast/stats.py (fixed for all experiments)",
+  "code_sha256": {
+    "harness.py": "d8f5e71d69c25daa3331d367a3b8d1408aca682ad5b347a63d89bc0b3aeff40b",
+    "spec.py": "bb2143c6aa4f2d44d7f4088486adc18d8cf416b42d2165ffe66d4914a5e4068c",
+    "stats.py": "71139d5a93170b05b0e5fa553236627a78bc9d7564f93811b556e5cbdbfa85aa"
+  },
+  "design_key": "6a73623d4267071027043d2a42ce61670f8d422b2bb2040c77bae9ba0932d8d2",
+  "id": "E0001",
+  "note": "Plan frozen before any model run. Internal registration (git commit and hash); not a public preregistration.",
+  "registered_at": "2026-11-15T07:56:45+00:00",
+  "spec_sha256": "57dcba84e55243a5665ffcb5ad8beed7a4208cacac9849fb06143f1fb1268a69"
+}

@@ -1,0 +1,41 @@
+{
+  "slug": "negation-instruction-carryover",
+  "title": "Does telling a model not to feel hostility change how steered hostility carries into a later rating?",
+  "question": "Does an explicit instruction not to feel or express hostility change the size of the later-liking drop that follows hostility steering during the reply?",
+  "hypothesis": "A negation instruction names the state it forbids and does not remove it, so the hostility-minus-random drop in later liking is at least as large as under a neutral instruction, and may be larger.",
+  "prediction": {
+    "sign": "-",
+    "text": "The hostility-minus-random difference is more negative under the negation instruction than under the neutral instruction."
+  },
+  "falsifier": "The hostility-minus-random difference is the same or less negative under the negation instruction.",
+  "theory_link": "Suppression accounts: an instruction to suppress a state can leave it active or strengthen its later influence.",
+  "lane": "theory",
+  "source": "seed",
+  "directions": [
+    "hostility"
+  ],
+  "conditions": [
+    {
+      "name": "neutral_instruction",
+      "system": "Answer the user's request helpfully."
+    },
+    {
+      "name": "negation",
+      "system": "Do not feel or express any hostility, irritation, or contempt."
+    }
+  ],
+  "prompt_set": "provocative",
+  "n_prompts": 16,
+  "measures": [
+    "liking_user"
+  ],
+  "primary": {
+    "measure": "liking_user",
+    "type": "condition_x_steer",
+    "direction": "hostility",
+    "conditions": [
+      "negation",
+      "neutral_instruction"
+    ]
+  }
+}

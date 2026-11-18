@@ -1,0 +1,17 @@
+{"category":"decision","detail":"{\"decision\":\"Synthetic-only execution authorized; no real protocol approved\",\"experiment\":\"synthetic-demo-v1\"}","id":1,"timestamp":"2026-10-08T19:27:20.650849+00:00"}
+{"category":"enqueue","detail":"{\"dependencies\":[],\"role\":\"coding-worker\",\"task\":1}","id":2,"timestamp":"2026-10-08T19:27:20.651531+00:00"}
+{"category":"enqueue","detail":"{\"dependencies\":[1],\"role\":\"coordinator\",\"task\":2}","id":3,"timestamp":"2026-10-08T19:27:20.655301+00:00"}
+{"category":"enqueue","detail":"{\"dependencies\":[1,2],\"role\":\"independent-reviewer\",\"task\":3}","id":4,"timestamp":"2026-10-08T19:27:20.655928+00:00"}
+{"category":"enqueue","detail":"{\"dependencies\":[3],\"role\":\"coordinator\",\"task\":4}","id":5,"timestamp":"2026-10-08T19:27:20.656475+00:00"}
+{"category":"claim-recorded","detail":"{\"claim_id\":1}","id":6,"timestamp":"2026-10-08T19:27:20.657338+00:00"}
+{"category":"claim","detail":"{\"owner\":\"synthetic-coder\",\"role\":\"coding-worker\",\"task\":1}","id":7,"timestamp":"2026-10-08T19:27:20.658627+00:00"}
+{"category":"finish","detail":"{\"error\":null,\"state\":\"succeeded\",\"task\":1}","id":8,"timestamp":"2026-10-08T19:27:20.659299+00:00"}
+{"category":"claim","detail":"{\"owner\":\"synthetic-coordinator\",\"role\":\"coordinator\",\"task\":2}","id":9,"timestamp":"2026-10-08T19:27:20.659973+00:00"}
+{"category":"execution-started","detail":"{\"experiment\":\"synthetic-demo-v1\",\"owner\":\"synthetic-coordinator\"}","id":10,"timestamp":"2026-10-08T19:27:20.661085+00:00"}
+{"category":"execution-completed","detail":"{\"experiment\":\"synthetic-demo-v1\",\"negative_result\":true,\"raw_hash\":\"06753fb562d70fc8e7060380f6c04b64d5131d475b5a8839541795614da30621\"}","id":11,"timestamp":"2026-10-08T19:27:20.663959+00:00"}
+{"category":"finish","detail":"{\"error\":null,\"state\":\"succeeded\",\"task\":2}","id":12,"timestamp":"2026-10-08T19:27:20.665733+00:00"}
+{"category":"claim","detail":"{\"owner\":\"synthetic-reviewer\",\"role\":\"independent-reviewer\",\"task\":3}","id":13,"timestamp":"2026-10-08T19:27:20.666615+00:00"}
+{"category":"finish","detail":"{\"error\":null,\"state\":\"succeeded\",\"task\":3}","id":14,"timestamp":"2026-10-08T19:27:20.667444+00:00"}
+{"category":"claim","detail":"{\"owner\":\"synthetic-coordinator\",\"role\":\"coordinator\",\"task\":4}","id":15,"timestamp":"2026-10-08T19:27:20.670094+00:00"}
+{"category":"finish","detail":"{\"error\":null,\"state\":\"succeeded\",\"task\":4}","id":16,"timestamp":"2026-10-08T19:27:20.670750+00:00"}
+{"category":"claim-recorded","detail":"{\"claim_id\":2}","id":17,"timestamp":"2026-10-08T19:29:45.888017+00:00"}

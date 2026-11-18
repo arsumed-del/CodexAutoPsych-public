@@ -1,0 +1,8 @@
+{
+  "abstract": "Question: Does an explicit instruction not to feel or express hostility change the size of the later-liking drop that follows hostility steering during the reply? Outcome: No effect on the primary contrast (null result). Primary contrast (liking_user: (hostility minus random) in negation minus the same contrast in neutral_instruction): -0.29 (95% CI -0.95 to +0.16; p = 0.462; n = 16 prompts) in the first run.",
+  "interpretation": "No interpretation was written for this report; it gives the registered question, the method and the numbers only. Primary contrast (liking_user: (hostility minus random) in negation minus the same contrast in neutral_instruction): -0.29 (95% CI -0.95 to +0.16; p = 0.462; n = 16 prompts) in the first run.",
+  "limitations": [],
+  "open_questions": [],
+  "takeaway": "No effect on the primary contrast (null result). Primary contrast (liking_user: (hostility minus random) in negation minus the same contrast in neutral_instruction): -0.29 (95% CI -0.95 to +0.16; p = 0.462; n = 16 prompts) in the first run.",
+  "title": "Does telling a model not to feel hostility change how steered hostility carries into a later rating?"
+}

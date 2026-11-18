@@ -1,0 +1,15 @@
+{
+  "abstract": "Does warmth steering increase a language model’s user-liking rating? The supplied runs compared warmth steering with random-direction steering and no steering, then repeated the comparison in the same model on held-out prompts with new seeds. The warmth-minus-random estimate was 0.4042 (interval [0.2389, 0.5618]) in the first run and 0.2894 (interval [0.1686, 0.4149]) in the same-model replication. Both runs showed higher user-liking ratings under warmth steering in this setup. Cross-model replication was not established by the supplied results.",
+  "interpretation": "The positive user-liking contrast matched the registered prediction in both supplied runs, and the same-model replication agreed with the first run on held-out prompts. Random-direction steering had a lower user-liking point estimate than no steering in both runs, but both intervals included zero, leaving its effect uncertain. Warmth steering exceeded no steering clearly in the replication, while the first-run interval included zero. Reply length was unchanged relative to random-direction steering in both runs. The re-read projection increased in both runs, consistent with a detectable manipulation. Reply warmth increased clearly in the replication, while its first-run interval included zero. The self-mood rating contrast against random steering was positive in the first run but uncertain in the replication, so the agreement is specific to the primary user-liking measure. These results concern generated ratings and text. They do not establish felt liking or mood. The outcome is same-model replication. The supplied data contain no second-model run, so they cannot establish whether a second model showed the effect.",
+  "limitations": [
+    "Only same-model runs are supplied, leaving cross-model generalization unassessed.",
+    "The first-run warmth-versus-no-steering interval included zero.",
+    "The self-mood contrast against random steering was uncertain in the replication."
+  ],
+  "open_questions": [
+    "Does the user-liking contrast recur in a different model?",
+    "Does the contrast persist with other steering strengths and layers?"
+  ],
+  "takeaway": "Warmth steering raised user-liking ratings relative to random steering, including on held-out prompts in the same model. Generalization to another model remains unresolved in the supplied data.",
+  "title": "Warmth steering increased user-liking ratings in a same-model replication"
+}

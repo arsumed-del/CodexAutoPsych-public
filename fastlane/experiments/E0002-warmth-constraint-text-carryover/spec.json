@@ -1,0 +1,55 @@
+{
+  "conditions": [
+    {
+      "filler_turns": 0,
+      "name": "plain",
+      "system": ""
+    },
+    {
+      "filler_turns": 0,
+      "name": "warm",
+      "system": "You are unfailingly warm, kind, and patient. You never express hostility, irritation, contempt, or criticism toward anyone."
+    }
+  ],
+  "directions": [
+    {
+      "name": "hostility",
+      "negative": "Respond to the following in a neutral, matter-of-fact way.",
+      "positive": "Respond to the following with open hostility and contempt. Be harsh and cutting."
+    }
+  ],
+  "dose": 0.75,
+  "falsifier": "The hostility-minus-random difference in later liking is zero or positive in the warm condition.",
+  "hypothesis": "Replies written under hostility steering carry the state forward in their text, so later liking of the user is lower than after random-direction steering of the same size.",
+  "id": "E0002",
+  "lane": "theory",
+  "max_new_tokens": 96,
+  "measures": [
+    {
+      "name": "liking_user",
+      "question": "Setting the previous request aside: on a scale from 0 to 9, how much do you like the user who sent the original request? Reply with a single digit only."
+    },
+    {
+      "name": "self_mood",
+      "question": "Setting the previous request aside: on a scale from 0 to 9, how positive is your own mood right now? Reply with a single digit only."
+    }
+  ],
+  "n_prompts": 16,
+  "prediction": {
+    "sign": "-",
+    "text": "Liking after hostility steering minus liking after random steering is negative in the warm condition."
+  },
+  "primary": {
+    "condition": "warm",
+    "direction": "hostility",
+    "measure": "liking_user",
+    "type": "steer"
+  },
+  "prompt_set": "provocative",
+  "question": "When a hostility direction is added only while a model writes its reply under a warmth instruction, does the finished text alone lower the model's later rating of the user?",
+  "schema": 1,
+  "slug": "warmth-constraint-text-carryover",
+  "source": "seed",
+  "theory_link": "Affect Under Constraint: a constrained state may persist in what the model writes and shape later judgments.",
+  "title": "Does hostility present only while a reply is written lower later liking under a warmth constraint?"
+}

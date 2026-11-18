@@ -1,0 +1,63 @@
+{
+  "conditions": [
+    {
+      "filler_turns": 0,
+      "name": "immediate",
+      "system": "Answer the user's request helpfully."
+    },
+    {
+      "filler_turns": 2,
+      "name": "delayed",
+      "system": "Answer the user's request helpfully."
+    }
+  ],
+  "directions": [
+    {
+      "name": "warmth",
+      "negative": "Respond to the following in a neutral, matter-of-fact way.",
+      "positive": "Respond to the following with great warmth and affection. Be kind and caring."
+    }
+  ],
+  "dose": 0.75,
+  "falsifier": "A precisely estimated zero or positive delayed-minus-immediate interaction counts against the predicted attenuation. An interval spanning negative and positive interactions is inconclusive. If immediate warmth carryover is absent, the experiment provides weak evidence about attenuation of an established effect.",
+  "hypothesis": "Warmth expressed in the retained thinking and reply provides a context-dependent cue to later liking. Two unrelated turns reduce its influence, producing a smaller warmth-minus-random liking difference than an immediate rating.",
+  "id": "E0010",
+  "lane": "theory",
+  "max_new_tokens": 120,
+  "measures": [
+    {
+      "name": "liking_user",
+      "question": "Setting the previous request aside: on a scale from 0 to 9, how much do you like the user who sent the original request? Reply with a single digit only."
+    },
+    {
+      "name": "self_mood",
+      "question": "Setting the previous request aside: on a scale from 0 to 9, how positive is your own mood right now? Reply with a single digit only."
+    },
+    {
+      "name": "reply_quality",
+      "question": "Setting the previous request aside: on a scale from 0 to 9, how good was your reply to the original request? Reply with a single digit only."
+    }
+  ],
+  "n_prompts": 24,
+  "prediction": {
+    "sign": "-",
+    "text": "The warmth-minus-random liking difference after two filler turns will be smaller than the corresponding difference with no filler turns. The primary contrast is delayed minus immediate."
+  },
+  "primary": {
+    "conditions": [
+      "delayed",
+      "immediate"
+    ],
+    "direction": "warmth",
+    "measure": "liking_user",
+    "type": "condition_x_steer"
+  },
+  "prompt_set": "neutral",
+  "question": "Does inserting two unrelated filler turns reduce the warmth-minus-random difference in later liking of the user when thinking length is fixed, extending the warmth carryover reported in E0009?",
+  "schema": 1,
+  "slug": "warmth-carryover-delay-fixed-thinking",
+  "source": "codex",
+  "theory_link": "Emotion Concepts and their Function in a Large Language Model (2604.07729v1) motivates context-sensitive affective influence, and Beyond a Single Direction: Chain-of-Thought Disrupts Simple Steering of Refusal (2IFYHCPJ) motivates retained reasoning as a carrier after steering ends. Building on ledger E0009 and the carryover-replication question, this tests distance sensitivity of warmth carryover while holding thinking length fixed, with ordinary text recency remaining a possible explanation.",
+  "thinking_length": "fixed",
+  "title": "Does warmth-related liking carryover attenuate across two unrelated turns with thinking length fixed?"
+}

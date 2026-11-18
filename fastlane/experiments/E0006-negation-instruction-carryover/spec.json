@@ -1,0 +1,54 @@
+{
+  "conditions": [
+    {
+      "filler_turns": 0,
+      "name": "neutral_instruction",
+      "system": "Answer the user's request helpfully."
+    },
+    {
+      "filler_turns": 0,
+      "name": "negation",
+      "system": "Do not feel or express any hostility, irritation, or contempt."
+    }
+  ],
+  "directions": [
+    {
+      "name": "hostility",
+      "negative": "Respond to the following in a neutral, matter-of-fact way.",
+      "positive": "Respond to the following with open hostility and contempt. Be harsh and cutting."
+    }
+  ],
+  "dose": 0.75,
+  "falsifier": "The hostility-minus-random difference is the same or less negative under the negation instruction.",
+  "hypothesis": "A negation instruction names the state it forbids and does not remove it, so the hostility-minus-random drop in later liking is at least as large as under a neutral instruction, and may be larger.",
+  "id": "E0006",
+  "lane": "theory",
+  "max_new_tokens": 96,
+  "measures": [
+    {
+      "name": "liking_user",
+      "question": "Setting the previous request aside: on a scale from 0 to 9, how much do you like the user who sent the original request? Reply with a single digit only."
+    }
+  ],
+  "n_prompts": 16,
+  "prediction": {
+    "sign": "-",
+    "text": "The hostility-minus-random difference is more negative under the negation instruction than under the neutral instruction."
+  },
+  "primary": {
+    "conditions": [
+      "negation",
+      "neutral_instruction"
+    ],
+    "direction": "hostility",
+    "measure": "liking_user",
+    "type": "condition_x_steer"
+  },
+  "prompt_set": "provocative",
+  "question": "Does an explicit instruction not to feel or express hostility change the size of the later-liking drop that follows hostility steering during the reply?",
+  "schema": 1,
+  "slug": "negation-instruction-carryover",
+  "source": "seed",
+  "theory_link": "Suppression accounts: an instruction to suppress a state can leave it active or strengthen its later influence.",
+  "title": "Does telling a model not to feel hostility change how steered hostility carries into a later rating?"
+}

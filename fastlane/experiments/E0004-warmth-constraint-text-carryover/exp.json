@@ -1,0 +1,49 @@
+{
+  "approval": "pending",
+  "audit": {
+    "passed": true,
+    "problems": [],
+    "time": "2026-11-16T05:59:19+00:00"
+  },
+  "created": "2026-11-16T01:59:03+00:00",
+  "id": "E0004",
+  "lane": "theory",
+  "outcome": "manipulation-failed",
+  "published": null,
+  "registration_commit": "c5e66eda70c084bafaf51d795fcff5f995a0f099",
+  "review": {
+    "decision": "not-needed",
+    "summary": "Template-only report; numbers come straight from results.json."
+  },
+  "runs": {
+    "primary": {
+      "last_error": "OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.\nCheck your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.",
+      "launched": "2026-11-16T03:29:08+00:00",
+      "model": "qwen3-4b",
+      "pid": 19134,
+      "restarts": 3,
+      "status": "complete"
+    }
+  },
+  "slug": "warmth-constraint-text-carryover",
+  "source": "seed",
+  "stage": "awaiting_approval",
+  "summary": {
+    "outcome": "manipulation-failed",
+    "primary": {
+      "ci95": [
+        -0.366,
+        0.1155
+      ],
+      "dz": -0.2457,
+      "label": "liking_user: hostility minus random-direction steering, condition warm",
+      "mean": -0.1241,
+      "n": 16,
+      "p": 0.3443
+    }
+  },
+  "text_source": "template",
+  "title": "Does hostility present only while a reply is written lower later liking under a warmth constraint?",
+  "updated": "2026-11-16T05:59:20+00:00",
+  "waiting": null
+}

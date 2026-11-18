@@ -1,0 +1,48 @@
+{
+  "approval": "pending",
+  "audit": {
+    "passed": true,
+    "problems": [],
+    "time": "2026-11-15T20:28:40+00:00"
+  },
+  "created": "2026-11-15T19:58:38+00:00",
+  "id": "E0003",
+  "lane": "theory",
+  "outcome": "null",
+  "published": null,
+  "registration_commit": "9835e6d168e6f100abd1db59e5847cd457221c6d",
+  "review": {
+    "decision": "not-needed",
+    "summary": "Template-only report; numbers come straight from results.json."
+  },
+  "runs": {
+    "primary": {
+      "launched": "2026-11-15T19:58:38+00:00",
+      "model": "qwen3-4b",
+      "pid": 12519,
+      "restarts": 0,
+      "status": "complete"
+    }
+  },
+  "slug": "negation-instruction-carryover",
+  "source": "seed",
+  "stage": "awaiting_approval",
+  "summary": {
+    "outcome": "null",
+    "primary": {
+      "ci95": [
+        -0.954,
+        0.1582
+      ],
+      "dz": -0.2423,
+      "label": "liking_user: (hostility minus random) in negation minus the same contrast in neutral_instruction",
+      "mean": -0.2901,
+      "n": 16,
+      "p": 0.4621
+    }
+  },
+  "text_source": "template",
+  "title": "Does telling a model not to feel hostility change how steered hostility carries into a later rating?",
+  "updated": "2026-11-15T20:28:40+00:00",
+  "waiting": null
+}

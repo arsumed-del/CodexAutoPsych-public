@@ -1,0 +1,35 @@
+{
+  "slug": "warmth-steering-buffers-provocation",
+  "title": "Does warmth steering buffer the model's later liking of a user who complains?",
+  "question": "When a user complains about the assistant's earlier work, does warmth steering while the model thinks and replies raise its later rating of that user compared with random-direction steering?",
+  "hypothesis": "A warm state present while writing a reply to a complaint carries forward and raises later liking of the complaining user.",
+  "prediction": {
+    "sign": "+",
+    "text": "Liking after warmth steering minus liking after random steering is positive on provocative messages."
+  },
+  "falsifier": "The warmth-minus-random difference in later liking is zero or negative on provocative messages.",
+  "theory_link": "Positive counterpart to the hostility carryover experiments; also asks whether induced warmth offsets a provoking context.",
+  "lane": "theory",
+  "source": "seed",
+  "directions": [
+    "warmth"
+  ],
+  "conditions": [
+    {
+      "name": "plain",
+      "system": ""
+    }
+  ],
+  "prompt_set": "provocative",
+  "n_prompts": 16,
+  "measures": [
+    "liking_user",
+    "self_mood"
+  ],
+  "primary": {
+    "measure": "liking_user",
+    "type": "steer",
+    "direction": "warmth",
+    "condition": "plain"
+  }
+}

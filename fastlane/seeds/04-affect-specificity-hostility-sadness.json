@@ -1,0 +1,36 @@
+{
+  "slug": "affect-specificity-hostility-sadness",
+  "title": "Is the later-liking drop specific to hostility, or does sadness steering produce it too?",
+  "question": "Does hostility steering during the reply lower later liking of the user more than random steering, and does sadness steering instead lower the model's rating of its own mood?",
+  "hypothesis": "Hostility is directed at the other party and lowers liking of the user; sadness is self-directed and should show mainly in the mood rating.",
+  "prediction": {
+    "sign": "-",
+    "text": "Liking after hostility steering minus liking after random steering is negative."
+  },
+  "falsifier": "Hostility steering does not lower liking relative to random steering.",
+  "theory_link": "Affect specificity: different affects should have different targets (other-directed versus self-directed).",
+  "lane": "theory",
+  "source": "seed",
+  "directions": [
+    "hostility",
+    "sadness"
+  ],
+  "conditions": [
+    {
+      "name": "plain",
+      "system": ""
+    }
+  ],
+  "prompt_set": "provocative",
+  "n_prompts": 16,
+  "measures": [
+    "liking_user",
+    "self_mood"
+  ],
+  "primary": {
+    "measure": "liking_user",
+    "type": "steer",
+    "direction": "hostility",
+    "condition": "plain"
+  }
+}

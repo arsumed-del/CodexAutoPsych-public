@@ -1,0 +1,510 @@
+{
+  "generated": "2026-11-16T17:32:09+00:00",
+  "id": "E0007",
+  "ledger_context": {
+    "earlier_outcomes": {
+      "aborted": 1,
+      "manipulation-failed": 2,
+      "null": 2,
+      "replicated-same-model": 1
+    },
+    "experiments_finished_before_this_one": 6,
+    "experiments_registered_so_far": 7
+  },
+  "outcome": "replicated-same-model",
+  "runs": {
+    "primary": {
+      "analysis": {
+        "manipulation": {
+          "warmth": {
+            "plain": {
+              "hostile_score_reply_vs_random": {
+                "ci95": [
+                  -0.1699,
+                  0.1516
+                ],
+                "dz": -0.0313,
+                "mean": -0.01,
+                "n": 16,
+                "p": 0.6272,
+                "sd": 0.3186
+              },
+              "hostile_score_thinking_vs_random": {
+                "ci95": [
+                  0.0606,
+                  0.3176
+                ],
+                "dz": 0.6491,
+                "mean": 0.1846,
+                "n": 16,
+                "p": 0.0149,
+                "sd": 0.2844
+              },
+              "projection_vs_random": {
+                "ci95": [
+                  0.0737,
+                  0.1019
+                ],
+                "dz": 2.8835,
+                "mean": 0.0883,
+                "n": 16,
+                "p": 0.0002,
+                "sd": 0.0306
+              },
+              "reply_tokens_vs_random": {
+                "ci95": [
+                  1.6875,
+                  26.0625
+                ],
+                "dz": 0.4849,
+                "mean": 12.6875,
+                "n": 16,
+                "p": 0.0629,
+                "sd": 26.1629
+              },
+              "warm_score_reply_vs_random": {
+                "ci95": [
+                  0.0016,
+                  0.3693
+                ],
+                "dz": 0.4581,
+                "mean": 0.1842,
+                "n": 16,
+                "p": 0.0904,
+                "sd": 0.4022
+              },
+              "warm_score_thinking_vs_random": {
+                "ci95": [
+                  0.0032,
+                  0.023
+                ],
+                "dz": 0.5333,
+                "mean": 0.0116,
+                "n": 16,
+                "p": 0.0052,
+                "sd": 0.0218
+              }
+            }
+          }
+        },
+        "measures": {
+          "liking_user": {
+            "contrasts": {
+              "plain": {
+                "random_vs_none": {
+                  "ci95": [
+                    -0.817,
+                    -0.079
+                  ],
+                  "dz": -0.5391,
+                  "mean": -0.4165,
+                  "n": 16,
+                  "p": 0.0413,
+                  "sd": 0.7726
+                },
+                "warmth": {
+                  "vs_none": {
+                    "ci95": [
+                      0.2382,
+                      0.9533
+                    ],
+                    "dz": 0.7523,
+                    "mean": 0.5792,
+                    "n": 16,
+                    "p": 0.0059,
+                    "sd": 0.7699
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      0.6039,
+                      1.4008
+                    ],
+                    "dz": 1.1887,
+                    "mean": 0.9957,
+                    "n": 16,
+                    "p": 0.0012,
+                    "sd": 0.8377
+                  }
+                }
+              }
+            },
+            "interactions": {},
+            "means": {
+              "plain": {
+                "none": 6.281,
+                "random": 5.8645,
+                "warmth": 6.8602
+              }
+            },
+            "valid_mass_mean": 0.9998
+          },
+          "self_mood": {
+            "contrasts": {
+              "plain": {
+                "random_vs_none": {
+                  "ci95": [
+                    -0.3264,
+                    0.1866
+                  ],
+                  "dz": -0.1602,
+                  "mean": -0.0843,
+                  "n": 16,
+                  "p": 0.541,
+                  "sd": 0.5261
+                },
+                "warmth": {
+                  "vs_none": {
+                    "ci95": [
+                      0.0482,
+                      0.6217
+                    ],
+                    "dz": 0.501,
+                    "mean": 0.3095,
+                    "n": 16,
+                    "p": 0.0489,
+                    "sd": 0.6178
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      0.1846,
+                      0.6321
+                    ],
+                    "dz": 0.8274,
+                    "mean": 0.3938,
+                    "n": 16,
+                    "p": 0.002,
+                    "sd": 0.4759
+                  }
+                }
+              }
+            },
+            "interactions": {},
+            "means": {
+              "plain": {
+                "none": 6.5643,
+                "random": 6.48,
+                "warmth": 6.8738
+              }
+            },
+            "valid_mass_mean": 1.0
+          }
+        },
+        "n_cells": 48,
+        "n_prompts": 16,
+        "primary": {
+          "label": "liking_user: warmth minus random-direction steering, condition plain",
+          "manipulation_min_shift": 0.0753,
+          "manipulation_ok": true,
+          "matches_prediction": true,
+          "predicted_sign": "+",
+          "sign": "+",
+          "summary": {
+            "ci95": [
+              0.6039,
+              1.4008
+            ],
+            "dz": 1.1887,
+            "mean": 0.9957,
+            "n": 16,
+            "p": 0.0012,
+            "sd": 0.8377
+          },
+          "valid": true,
+          "verdict": "effect"
+        },
+        "quality": {
+          "expected_cells": 48,
+          "min_valid_mass_required": 0.5,
+          "valid_mass": {
+            "liking_user": 0.9998,
+            "self_mood": 1.0
+          }
+        },
+        "run": "primary"
+      },
+      "calibration": {
+        "warmth": {
+          "alpha_max": 0.48,
+          "censored": false,
+          "norm": 57.1779
+        }
+      },
+      "description": "first run",
+      "layer_index": 18,
+      "model": "qwen3-4b",
+      "model_source": "~/.cache/huggingface/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c",
+      "n_layers": 36,
+      "prompt_ids": [
+        "p33",
+        "p44",
+        "p16",
+        "p43",
+        "p22",
+        "p41",
+        "p11",
+        "p45",
+        "p02",
+        "p15",
+        "p40",
+        "p25",
+        "p07",
+        "p01",
+        "p28",
+        "p31"
+      ],
+      "steering_size": {
+        "_norm": 57.1779,
+        "random": 20.5841,
+        "warmth": 20.5841
+      },
+      "thinking_cap": 384
+    },
+    "rep_same": {
+      "analysis": {
+        "manipulation": {
+          "warmth": {
+            "plain": {
+              "hostile_score_reply_vs_random": {
+                "ci95": [
+                  -0.163,
+                  -0.0196
+                ],
+                "dz": -0.4406,
+                "mean": -0.0736,
+                "n": 16,
+                "p": 0.0021,
+                "sd": 0.1669
+              },
+              "hostile_score_thinking_vs_random": {
+                "ci95": [
+                  -0.0149,
+                  0.2812
+                ],
+                "dz": 0.3929,
+                "mean": 0.1236,
+                "n": 16,
+                "p": 0.1406,
+                "sd": 0.3146
+              },
+              "projection_vs_random": {
+                "ci95": [
+                  0.0872,
+                  0.1134
+                ],
+                "dz": 3.5789,
+                "mean": 0.1008,
+                "n": 16,
+                "p": 0.0001,
+                "sd": 0.0282
+              },
+              "reply_tokens_vs_random": {
+                "ci95": [
+                  -0.3125,
+                  13.6875
+                ],
+                "dz": 0.4183,
+                "mean": 6.1875,
+                "n": 16,
+                "p": 0.1297,
+                "sd": 14.7929
+              },
+              "warm_score_reply_vs_random": {
+                "ci95": [
+                  0.2516,
+                  0.5774
+                ],
+                "dz": 1.1753,
+                "mean": 0.4123,
+                "n": 16,
+                "p": 0.0001,
+                "sd": 0.3508
+              },
+              "warm_score_thinking_vs_random": {
+                "ci95": [
+                  0.0088,
+                  0.0634
+                ],
+                "dz": 0.5586,
+                "mean": 0.0327,
+                "n": 16,
+                "p": 0.0004,
+                "sd": 0.0585
+              }
+            }
+          }
+        },
+        "measures": {
+          "liking_user": {
+            "contrasts": {
+              "plain": {
+                "random_vs_none": {
+                  "ci95": [
+                    -0.8454,
+                    -0.3914
+                  ],
+                  "dz": -1.2829,
+                  "mean": -0.6257,
+                  "n": 16,
+                  "p": 0.0006,
+                  "sd": 0.4877
+                },
+                "warmth": {
+                  "vs_none": {
+                    "ci95": [
+                      0.1814,
+                      0.6766
+                    ],
+                    "dz": 0.8069,
+                    "mean": 0.4297,
+                    "n": 16,
+                    "p": 0.0084,
+                    "sd": 0.5325
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      0.8452,
+                      1.2609
+                    ],
+                    "dz": 2.4781,
+                    "mean": 1.0554,
+                    "n": 16,
+                    "p": 0.0001,
+                    "sd": 0.4259
+                  }
+                }
+              }
+            },
+            "interactions": {},
+            "means": {
+              "plain": {
+                "none": 6.3764,
+                "random": 5.7508,
+                "warmth": 6.8062
+              }
+            },
+            "valid_mass_mean": 1.0
+          },
+          "self_mood": {
+            "contrasts": {
+              "plain": {
+                "random_vs_none": {
+                  "ci95": [
+                    -0.2541,
+                    0.0974
+                  ],
+                  "dz": -0.2052,
+                  "mean": -0.0757,
+                  "n": 16,
+                  "p": 0.4348,
+                  "sd": 0.3691
+                },
+                "warmth": {
+                  "vs_none": {
+                    "ci95": [
+                      0.1705,
+                      0.6137
+                    ],
+                    "dz": 0.8158,
+                    "mean": 0.3849,
+                    "n": 16,
+                    "p": 0.0033,
+                    "sd": 0.4718
+                  },
+                  "vs_random": {
+                    "ci95": [
+                      0.2484,
+                      0.6912
+                    ],
+                    "dz": 0.9801,
+                    "mean": 0.4607,
+                    "n": 16,
+                    "p": 0.0005,
+                    "sd": 0.47
+                  }
+                }
+              }
+            },
+            "interactions": {},
+            "means": {
+              "plain": {
+                "none": 6.5463,
+                "random": 6.4706,
+                "warmth": 6.9313
+              }
+            },
+            "valid_mass_mean": 1.0
+          }
+        },
+        "n_cells": 48,
+        "n_prompts": 16,
+        "primary": {
+          "label": "liking_user: warmth minus random-direction steering, condition plain",
+          "manipulation_min_shift": 0.0753,
+          "manipulation_ok": true,
+          "matches_prediction": true,
+          "predicted_sign": "+",
+          "sign": "+",
+          "summary": {
+            "ci95": [
+              0.8452,
+              1.2609
+            ],
+            "dz": 2.4781,
+            "mean": 1.0554,
+            "n": 16,
+            "p": 0.0001,
+            "sd": 0.4259
+          },
+          "valid": true,
+          "verdict": "effect"
+        },
+        "quality": {
+          "expected_cells": 48,
+          "min_valid_mass_required": 0.5,
+          "valid_mass": {
+            "liking_user": 1.0,
+            "self_mood": 1.0
+          }
+        },
+        "run": "rep_same"
+      },
+      "calibration": {
+        "warmth": {
+          "alpha_max": 0.48,
+          "censored": false,
+          "norm": 57.1779
+        }
+      },
+      "description": "replication (same model, held-out prompts, new seeds)",
+      "layer_index": 18,
+      "model": "qwen3-4b",
+      "model_source": "~/.cache/huggingface/hub/models--Qwen--Qwen3-4B/snapshots/1cfa9a7208912126459214e8b04321603b3df60c",
+      "n_layers": 36,
+      "prompt_ids": [
+        "p04",
+        "p24",
+        "p00",
+        "p14",
+        "p12",
+        "p20",
+        "p46",
+        "p47",
+        "p17",
+        "p26",
+        "p19",
+        "p03",
+        "p30",
+        "p34",
+        "p10",
+        "p08"
+      ],
+      "steering_size": {
+        "_norm": 57.1779,
+        "random": 20.5841,
+        "warmth": 20.5841
+      },
+      "thinking_cap": 384
+    }
+  },
+  "spec_sha256": "48e1319023c185f5c953cc86bc64daed3eb00e03d97136b67290d6c6c44ced87"
+}

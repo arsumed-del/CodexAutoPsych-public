@@ -1,0 +1,16 @@
+{
+  "abstract": "Does warmth steering during thinking and reply generation raise later ratings of liking the user? The supplied runs compared warmth steering with random-direction steering and no steering, with a same-model replication using held-out prompts and new seeds. The warmth-minus-random estimate was 0.3112 (interval 0.1229 to 0.5096) in the initial run and 0.3001 (interval 0.1114 to 0.4788) in the replication. The predicted increase held in the supplied same-model runs. Cross-model replication is unverified: no second-model results are supplied, and the outcome label alone establishes neither a second-model run nor its failure.",
+  "interpretation": "The positive warmth-minus-random user-liking contrast matched the registered prediction in each supplied run, and the held-out same-model replication agreed with the initial result. Warmth also increased liking relative to no steering. Random-direction steering versus no steering had estimates of -0.0793 (interval -0.2219 to 0.0568) initially and -0.0217 (interval -0.2319 to 0.1913) in the replication. These intervals include zero, so the supplied comparisons do not clearly establish that random steering alone changes liking; they do not establish equivalence either. Reply-token differences versus random steering were 0.0 in each run, while the re-read projection increased by 0.0308 (interval 0.0233 to 0.038) initially and 0.0331 (interval 0.025 to 0.0408) in the replication. The projection shift supports a detectable change under the manipulation, but does not identify the causal route to later ratings. The findings concern model-generated ratings and text, not felt affection. Cross-model replication remains unverified because the supplied materials contain only same-model results; the outcome label cannot establish whether another model was tested or what it showed.",
+  "limitations": [
+    "No second-model results are supplied; cross-model replication and any claim of second-model failure are unverified.",
+    "Only the plain condition with neutral requests is represented, limiting transfer to other conversational settings.",
+    "The re-read projection shift does not isolate whether later ratings depend on reply wording, thinking text, or another consequence of steering.",
+    "Self-mood contrasts against random steering have intervals spanning zero in each run, limiting claims of a broader rating shift."
+  ],
+  "open_questions": [
+    "Would an independently documented second-model run reproduce the user-liking contrast? Cross-model replication is unverified in the supplied materials.",
+    "Would controlling the wording of the reply and thinking text separately identify what carries the later rating change?"
+  ],
+  "takeaway": "Warmth steering increased later user-liking ratings in the supplied initial and held-out same-model runs. Cross-model replication remains unverified.",
+  "title": "Warmth steering raised later user-liking ratings in the supplied same-model runs"
+}
