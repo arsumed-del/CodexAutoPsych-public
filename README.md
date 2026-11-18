@@ -1,5 +1,7 @@
 # CodexAutoPsych
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24330497.svg)](https://doi.org/10.5281/zenodo.24330497)
+
 **An autonomous research engine for in-silico experiments on language-model psychology.**
 
 CodexAutoPsych reads the literature, proposes small experiments on open-weight
